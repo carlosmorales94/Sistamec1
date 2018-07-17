@@ -54,14 +54,14 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">                    
-                        <li><a runat="server" href="~/Ingreso_Vehiculo.aspx">Ingrese Vehiculo</a></li>
+                        <li><a runat="server" href="~/Ingreso_Cliente.aspx">Ingreso Cliente</a></li>
                         <li><a runat="server" href="~/Ingreso_Stock.aspx">Stock</a></li>
                         <li><a runat="server" href="~/DescontarStock.aspx">Sacar del Stock</a></li>
                         <li><a runat="server" href="~/Factura.aspx">Factura</a></li>
                         <li><a runat="server" href="~/CrearUsuario.aspx">Crear Usuario</a></li>
                         <li><a runat="server" href="~/Citas.aspx">Citas</a></li>
                         <li><a runat="server" href="~/Cotizar.aspx">Cotizaciones</a></li>
-                        <%--<li><a runat="server" href="~/Historial.aspx">Historial</a></li>--%>
+                        <li><a runat="server" href="~/Task.aspx">Tareas</a></li>
                     </ul>
                 </div>
             </div>

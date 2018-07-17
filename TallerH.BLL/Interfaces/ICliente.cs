@@ -9,10 +9,10 @@ namespace TallerH.BLL.Interfaces
 {
     public interface ICliente
     {
-        Cliente BuscarCliente(string placa);
+        Cliente BuscarCliente(int cedula);
         void InsertarCliente(Cliente cliente);
         void ActualizarCliente(Cliente cliente);
-        void EliminarCliente(string placa);
+        void EliminarCliente(int cedula);
         //List<Cliente> ListarCliente();
     }
 }

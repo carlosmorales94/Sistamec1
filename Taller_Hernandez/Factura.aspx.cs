@@ -42,16 +42,16 @@ namespace Taller_Hernandez
             {
                 var descProducto= ds.BuscarDescProducto(txtBuscarPlaca.Text);
                 var auto = aut.BuscarAuto(txtBuscarPlaca.Text);
-                var cliente = cli.BuscarCliente(txtBuscarPlaca.Text);
+               // var cliente = cli.BuscarCliente(txtBuscarPlaca.Text);
                 if (auto != null)
                 {
-                    LbRCorreo.Text = cliente.Correo;
-                    LbRMovil.Text = cliente.Movil.ToString(); 
+                  //  LbRCorreo.Text = cliente.Correo;
+                  //  LbRMovil.Text = cliente.Movil.ToString(); 
                     LbRMarca.Text = auto.Marca;
                     LbRPlaca.Text = auto.Placa;
-                    TxtNombreCliente.Text = cliente.NombreCliente;
+                 //   TxtNombreCliente.Text = cliente.NombreCliente;
                     LbRKm.Text = auto.KM.ToString();
-                    LbRCedula.Text = cliente.Cedula.ToString();
+                  //  LbRCedula.Text = cliente.Cedula.ToString();
                     TextBox3.Text = descProducto.Cantidad.ToString();
                     TextBox2.Text = descProducto.Descripcion ;
                     TextBox1.Text = descProducto.Precio.ToString();            
@@ -140,7 +140,7 @@ namespace Taller_Hernandez
 
             try
             {
-                cli.EliminarCliente(txtBuscarPlaca.Text);
+              //  cli.EliminarCliente(txtBuscarPlaca.Text);
             }
             catch (Exception)
             {

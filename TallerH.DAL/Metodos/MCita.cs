@@ -33,10 +33,10 @@ namespace TallerH.DAL.Metodos
         {
             return _db.Select<Cita>(x => x.Placa == placa).FirstOrDefault();
         }
-        //public void ActualizarCitas(Citas citas)
-        //{
-        //    _db.Update(citas);
-        //}
+        public void ActualizarCita(Cita cita)
+        {
+            _db.Update(cita);
+        }
 
         public void EliminarCita(string placa)
         {

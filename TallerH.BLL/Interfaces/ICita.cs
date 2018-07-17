@@ -10,7 +10,7 @@ namespace TallerH.BLL.Interfaces
     public interface ICita
     {
         List<Cita> ListarCita();
-        //void ActualizarCitas(Citas citas);
+        void ActualizarCita(Cita cita);
         Cita BuscarCita(string placa);
         void InsertarCita(Cita cita);
         void EliminarCita(string placa);

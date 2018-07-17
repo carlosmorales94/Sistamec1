@@ -24,10 +24,10 @@ namespace TallerH.BLL.Metodos
         {
             return cit.BuscarCita(placa);
         }
-        //public void Actualizarcitas(Citas citas)
-        //{
-        //    cit.ActualizarAuto(citas);
-        //}
+        public void ActualizarCita(Cita cita)
+        {
+            cit.ActualizarCita(cita);
+        }
 
         public void EliminarCita(string placa)
         {
