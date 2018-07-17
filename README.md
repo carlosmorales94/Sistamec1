@@ -4,7 +4,7 @@ Es un sistema para un taller mecánico, con le fin de optimizar las diferentes t
 
 Integrantes:
 
-Carlos Morales
-Carlos Morales
+Carlos Morales Sandí
+Carlos Morales Ibarra
 Felipe Urena
 Ismael Gonzalez
