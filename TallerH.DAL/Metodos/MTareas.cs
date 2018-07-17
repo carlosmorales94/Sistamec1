@@ -10,34 +10,27 @@ using TallerH.DAL.Interfaces;
 
 namespace TallerH.DAL.Metodos
 {
-    public class MCliente : ICliente
+    public class MTareas : ITareas
     {
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
-        public MCliente()
+        public MTareas()
         {
             _conexion = new OrmLiteConnectionFactory(BD.Default.conexion,
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public Cliente BuscarCliente(int cedula)
+        public void InsertarTareas(Tareas tareas)
         {
-            return _db.Select<Cliente>(x => x.Cedula == cedula).FirstOrDefault();
+            _db.Insert(tareas);
         }
-
-        public void InsertarCliente(Cliente cliente)
+        public void EliminarTareas(string descripciontask)
         {
-            _db.Insert(cliente);
+            _db.Delete<Tareas>(x => x.Descripciontask == descripciontask);
         }
-
-        public void ActualizarCliente(Cliente cliente)
+        public List<Tareas> ListarTareas()
         {
-            _db.Update(cliente);
-        }
-
-        public void EliminarCliente(int cedula)
-        {
-            _db.Delete<Cliente>(x => x.Cedula == cedula);
+            return _db.Select<Tareas>();
         }
     }
 }

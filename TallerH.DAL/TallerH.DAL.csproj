@@ -31,19 +31,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ServiceStack.Common">
-      <HintPath>..\..\..\Progra V\Semana3\DLL_PrograV\ServiceStack.Common.dll</HintPath>
+      <HintPath>F:\Progra V\Semana3\DLL_PrograV\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\..\..\Progra V\Semana3\DLL_PrograV\ServiceStack.Interfaces.dll</HintPath>
+      <HintPath>F:\Progra V\Semana3\DLL_PrograV\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite">
-      <HintPath>..\..\..\Progra V\Semana3\DLL_PrograV\ServiceStack.OrmLite.dll</HintPath>
+      <HintPath>F:\Progra V\Semana3\DLL_PrograV\ServiceStack.OrmLite.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite.SqlServer">
-      <HintPath>..\..\..\Progra V\Semana3\DLL_PrograV\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <HintPath>F:\Progra V\Semana3\DLL_PrograV\ServiceStack.OrmLite.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\..\Progra V\Semana3\DLL_PrograV\ServiceStack.Text.dll</HintPath>
+      <HintPath>F:\Progra V\Semana3\DLL_PrograV\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +67,7 @@
     <Compile Include="Interfaces\IFacturass.cs" />
     <Compile Include="Interfaces\IHistorial.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
+    <Compile Include="Interfaces\ITareas.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Metodos\MAuto.cs" />
     <Compile Include="Metodos\MCita.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Metodos\MFacturass.cs" />
     <Compile Include="Metodos\MHistorial.cs" />
     <Compile Include="Metodos\MProducto.cs" />
+    <Compile Include="Metodos\MTareas.cs" />
     <Compile Include="Metodos\MUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

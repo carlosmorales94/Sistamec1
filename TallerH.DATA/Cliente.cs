@@ -11,11 +11,12 @@ namespace TallerH.DATA
     [Alias("Cliente")]
     public class Cliente
     {
-        public string Placa { get; set; }
-        public int Movil { get; set; }
-        public int Telefono { get; set; }
         public string NombreCliente { get; set; }
-        public string Correo { get; set; }
-        public int Cedula { get; set; }
+        public string ApellidoCliente { get; set; }
+        public int Telefono { get; set; }
+        public int Movil { get; set; }
+        public string Correo { get; set; } 
+        public string Nota { get; set; }
+        public int Cedula { get; set; }             
     }
 }

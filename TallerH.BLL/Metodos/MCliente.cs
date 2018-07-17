@@ -20,17 +20,17 @@ namespace TallerH.BLL.Metodos
         {
             cli.InsertarCliente(cliente);
         }
-        public Cliente BuscarCliente(string placa)
+        public Cliente BuscarCliente(int cedula)
         {
-            return cli.BuscarCliente(placa);
+            return cli.BuscarCliente(cedula);
         }
         public void ActualizarCliente(Cliente cliente)
         {
             cli.ActualizarCliente(cliente);
         }
-        public void EliminarCliente(string placa)
+        public void EliminarCliente(int cedula)
         {
-            cli.EliminarCliente(placa);
+            cli.EliminarCliente(cedula);
         }
         //public List<Cliente> ListarCliente()
         //{

@@ -49,58 +49,22 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl textoMensajeError;
         
         /// <summary>
-        /// LbNombre control.
+        /// LbMarca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbNombre;
+        protected global::System.Web.UI.WebControls.Label LbMarca;
         
         /// <summary>
-        /// TxtNombre control.
+        /// DrpMarca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtNombre;
-        
-        /// <summary>
-        /// LbMovil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbMovil;
-        
-        /// <summary>
-        /// txMovil control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txMovil;
-        
-        /// <summary>
-        /// LbCorre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbCorre;
-        
-        /// <summary>
-        /// TxtCorreo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCorreo;
+        protected global::System.Web.UI.WebControls.DropDownList DrpMarca;
         
         /// <summary>
         /// LbPlaca control.
@@ -121,22 +85,76 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.WebControls.TextBox TxtPlaca;
         
         /// <summary>
-        /// LbMarca control.
+        /// lbEstilo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbMarca;
+        protected global::System.Web.UI.WebControls.Label lbEstilo;
         
         /// <summary>
-        /// TxtMarca control.
+        /// DrpEstilo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMarca;
+        protected global::System.Web.UI.WebControls.DropDownList DrpEstilo;
+        
+        /// <summary>
+        /// LbBin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbBin;
+        
+        /// <summary>
+        /// TxtBin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtBin;
+        
+        /// <summary>
+        /// Lbano control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbano;
+        
+        /// <summary>
+        /// Drpano control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Drpano;
+        
+        /// <summary>
+        /// LbKM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbKM;
+        
+        /// <summary>
+        /// TxtKM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtKM;
         
         /// <summary>
         /// LbProVeh control.

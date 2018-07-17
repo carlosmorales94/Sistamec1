@@ -10,7 +10,7 @@
 namespace Taller_Hernandez {
     
     
-    public partial class Ingreso_Vehiculo {
+    public partial class Ingreso_Cliente {
         
         /// <summary>
         /// mensaje control.
@@ -58,13 +58,13 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.WebControls.Label LbBuscar;
         
         /// <summary>
-        /// TxtBusplaIngVeh control.
+        /// TxtBuscarCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBusplaIngVeh;
+        protected global::System.Web.UI.WebControls.TextBox TxtBuscarCedula;
         
         /// <summary>
         /// BtnBuscarAuto control.
@@ -74,15 +74,6 @@ namespace Taller_Hernandez {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnBuscarAuto;
-        
-        /// <summary>
-        /// BtCita control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtCita;
         
         /// <summary>
         /// BtnEliminar control.
@@ -110,6 +101,24 @@ namespace Taller_Hernandez {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtNCliente;
+        
+        /// <summary>
+        /// LbApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbApellido;
+        
+        /// <summary>
+        /// TxtApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtApellido;
         
         /// <summary>
         /// LbCedula control.
@@ -184,114 +193,6 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.WebControls.TextBox TxtCorreo;
         
         /// <summary>
-        /// LbMarca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbMarca;
-        
-        /// <summary>
-        /// TxtMarca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMarca;
-        
-        /// <summary>
-        /// LbEstilo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbEstilo;
-        
-        /// <summary>
-        /// TxtEstilo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtEstilo;
-        
-        /// <summary>
-        /// LbAno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbAno;
-        
-        /// <summary>
-        /// TxtAno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtAno;
-        
-        /// <summary>
-        /// LbBin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbBin;
-        
-        /// <summary>
-        /// TxtBin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBin;
-        
-        /// <summary>
-        /// LbPlaca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbPlaca;
-        
-        /// <summary>
-        /// TxtPlaca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPlaca;
-        
-        /// <summary>
-        /// LbKM control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbKM;
-        
-        /// <summary>
-        /// TxtKM control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtKM;
-        
-        /// <summary>
         /// LbNota control.
         /// </summary>
         /// <remarks>
@@ -310,85 +211,13 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.WebControls.TextBox TxtNota;
         
         /// <summary>
-        /// LbProVeh control.
+        /// BtnCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbProVeh;
-        
-        /// <summary>
-        /// TxtProVeh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProVeh;
-        
-        /// <summary>
-        /// LbRevInt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbRevInt;
-        
-        /// <summary>
-        /// TxtRevInt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtRevInt;
-        
-        /// <summary>
-        /// LbManPrev control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbManPrev;
-        
-        /// <summary>
-        /// TxtManPrev control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtManPrev;
-        
-        /// <summary>
-        /// LbDanVeh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbDanVeh;
-        
-        /// <summary>
-        /// TxtDanVeh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDanVeh;
-        
-        /// <summary>
-        /// BtnIngreVeh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnIngreVeh;
+        protected global::System.Web.UI.WebControls.Button BtnCliente;
         
         /// <summary>
         /// BtnAct control.
@@ -398,5 +227,14 @@ namespace Taller_Hernandez {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnAct;
+        
+        /// <summary>
+        /// BtnAgendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAgendar;
     }
 }
