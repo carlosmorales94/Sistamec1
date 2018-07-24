@@ -12,19 +12,23 @@ namespace Taller_Hernandez
 {
     public partial class Vista : System.Web.UI.Page
     {
+        ICita cit = new MCita();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ICita cit = new MCita();
             List<Cita> listaCita = cit.ListarCita();
-            var lista = listaCita.Select(x => new { x.FechaIngreso });
-            //ClFechas.DataSource = lista;
-            //ClFechas.DataBind();
+            var vista = listaCita.Select(x => new {x.Estado, x.Cedula, x.FechaIngreso, x.KM, x.Marca,x.Placa }).ToList();
+            Ggvcitas.DataSource = vista;
+            Ggvcitas.DataBind();
+            var lista = listaCita.Select(x=>new {x.FechaIngreso}).ToList();
+            Drpfecha.DataSource = lista;
+            Drpfecha.DataBind();            
             try
             {
                 if (!Page.IsPostBack)
                 {
-                    lvProductos.DataSource = cit.ListarCita();
-                    lvProductos.DataBind();
+
+                    //lvProductos.DataSource = cit.ListarCita();
+                   // lvProductos.DataBind();
                 }
             }
             catch (Exception)
@@ -52,5 +56,22 @@ namespace Taller_Hernandez
         {
 
         }
+        protected void Btnllegado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cita cita = new Cita
+                {
+                    Estado="Llegado",
+                };
+                cit.ActualizarCita(cita);
+                MostarMensaje("ChekIn Exitos");
+            }
+            catch (Exception)
+            {
+                MostarMensajeError("Ocurrio un error");
+            }
+        }
+        
     }
 }

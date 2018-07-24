@@ -49,12 +49,30 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl textoMensajeError;
         
         /// <summary>
-        /// lvProductos control.
+        /// Drpfecha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvProductos;
+        protected global::System.Web.UI.WebControls.DropDownList Drpfecha;
+        
+        /// <summary>
+        /// BtnBuscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnBuscar;
+        
+        /// <summary>
+        /// Ggvcitas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Ggvcitas;
     }
 }

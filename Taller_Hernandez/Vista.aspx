@@ -2,118 +2,35 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <br>    
-        <div class="alert alert-success" visible="false" id="mensaje" runat="server">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong id="textoMensaje" runat="server"></strong>
-        </div>
-        <div class="alert alert-danger" visible="false" id="mensajeError" runat="server">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong id="textoMensajeError" runat="server"></strong>
-        </div>
-             <br>
-     <div class="form-inline" >
-        <h3>Categorias</h3>
-<%--         <asp:DropDownList ID="ClFechas" runat="server" ></asp:DropDownList>
-     <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-success" OnClick="BtnBuscar_Click" />--%>
+    <br>
+    <div class="alert alert-success" visible="false" id="mensaje" runat="server">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong id="textoMensaje" runat="server"></strong>
+    </div>
+    <div class="alert alert-danger" visible="false" id="mensajeError" runat="server">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong id="textoMensajeError" runat="server"></strong>
     </div>
     <br>
-    <div class="container">
-        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Citas</div>
-                </div>
-                <div style="padding-top: 30px" class="panel-body">
-                    <div class="form-Vetical">      
-  <div class="form-group">
-        <asp:ListView ID="lvProductos" runat="server"
-            GroupItemCount="3"
-            ItemType="TallerH.DATA.Cita" DataKeyNames="FechaIngreso">
-            <EmptyDataTemplate> 
-                 <table>
-                    <tr>
-                        <td>No data was returned.</td>
-                    </tr>
-                </table>
-            </EmptyDataTemplate>
-            <EmptyItemTemplate>
-                <td />
-            </EmptyItemTemplate>
-            <GroupTemplate>
-                <tr id="itemPlaceholderContainer" runat="server">
-                    <td id="itemPlaceholder" runat="server"></td>
-                </tr>
-            </GroupTemplate>
-            <ItemTemplate>
-                <td runat="server">
-                    <table align="center">
-                           <tr>
-                            <td>
-                               Nombre Cliente
-                            </td>
-                            <td>
-                               Movil
-                            </td>
-                             <td>
-                               Correo
-                            </td>
-                             <td>
-                               Marca
-                            </td>
-                                  <td>
-                               Daños
-                            </td>
-                                  <td>
-                               Placa
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <%#: Item.NombreCliente %>
-                            </td>
-                            <td>
-                                <%#: Item.Movil %>
-                            </td>
-                              <td>
-                                <%#: Item.Correo %>
-                            </td>
-                             <td>
-                                <%#: Item.Marca %>
-                            </td>
-                                <td>
-                                <%#: Item.ProVeh %>
-                            </td>
-                             <td>
-                                <%#: Item.Placa %>
-                            </td>
-                        </tr>              
-             </table> 
-                    </p>
+    <div class="form-inline">
+        <table>
+            <tr>
+                <h2><%= DateTime.Now.ToShortDateString() %></h2>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Fecha:</h4>
                 </td>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
-                                    <tr id="groupPlaceholder"></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr></tr>
-                    </tbody>
-                </table>
-            </LayoutTemplate>
-        </asp:ListView>
-    </div> 
-                    </div>
-                        </div>                      
-                    </div>
-                </div>
-            </div>  
+                <td>
+                    <asp:DropDownList ID="Drpfecha" runat="server"></asp:DropDownList></td>
+                <td>
+                    <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscar_Click" /></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <p>
+        <asp:GridView ID="Ggvcitas" runat="server" BackColor="Silver" CssClass="table table-hover"></asp:GridView>
+    </p>
 </asp:Content>
+

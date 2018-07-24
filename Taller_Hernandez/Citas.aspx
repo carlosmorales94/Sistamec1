@@ -46,23 +46,17 @@
                                 <td>
                                     <asp:TextBox ID="TxtBin" runat="server" CssClass="form-control"></asp:TextBox></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>
                                     <asp:Label ID="Lbano" runat="server" Text="Año:"></asp:Label></td>
                                 <td>
                                     <asp:DropDownList ID="Drpano" runat="server"></asp:DropDownList></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>
                                     <asp:Label ID="LbKM" runat="server" Text="Kilometraje:"></asp:Label></td>
                                 <td>
                                     <asp:TextBox ID="TxtKM" runat="server" CssClass="form-control"></asp:TextBox></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="LbProVeh" runat="server" Text="Problemas del Vehiculo:"></asp:Label></td>
-                                <td>
-                                    <asp:TextBox ID="TxtPro" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>
@@ -71,11 +65,24 @@
                                     <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                                 </td>
                             </tr>
+
+                        </table>
+                        <table cellspacing="10" cellpadding="2">
+                            <tr>
+                                <td>
+                                    <asp:Label ID="LbProVeh" runat="server" Text="Problemas del Vehiculo:"></asp:Label></td>
+                                <td>
+                                    <asp:CheckBox ID="CheckBox1" runat="server" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="LbDescr" runat="server" Text="Label"></asp:Label> </td>
+
+                            </tr>
                             <tr>
                                 <td>
                                     <asp:Button ID="BtnAgendar" runat="server" Text="Agendar" OnClick="BtnAgendar_Click" /></td>
                             </tr>
-                        </table>
+                            </table>
                     </div>
                 </div>
             </div>
