@@ -65,60 +65,9 @@
             </div>
         </div>
     </div>
-    <div class="form-group" >
-        <table align="center">
-            <tr>
-                <td>Descripcion Tarea</td>
-            </tr>
-        </table>
-        <asp:ListView ID="lvTareas" runat="server"
-            GroupItemCount="1"
-            ItemType="TallerH.DATA.Tareas" DataKeyNames="Descripciontask">
-            <EmptyDataTemplate>
-                <table>
-                    <tr>
-                        <td>No data was returned.</td>
-                    </tr>
-                </table>
-            </EmptyDataTemplate>
-            <EmptyItemTemplate>
-                <td />
-            </EmptyItemTemplate>
-            <GroupTemplate>
-                <tr id="itemPlaceholderContainer" runat="server">
-                    <td id="itemPlaceholder" runat="server"></td>
-                </tr>
-            </GroupTemplate>
-            <ItemTemplate>
-                <td runat="server">
-                    <table align="center">
-                        <tr>
-                            <td><%#: Item.Descripciontask %></td>
-                        </tr>
-                    </table>
-                    </p>
-                </td>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
-                                    <tr id="groupPlaceholder"></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr></tr>
-                    </tbody>
-                </table>
-            </LayoutTemplate>
-        </asp:ListView>
+        <div align="center">
+        <asp:GridView ID="Ggvtareas" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
     </div>
-
 
 
 </asp:Content>

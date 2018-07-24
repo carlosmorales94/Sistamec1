@@ -162,6 +162,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Style\Menu.css" />
     <Content Include="Style\StyleSheet3.css" />
     <Content Include="Style\StyleSheet4.css" />
     <Content Include="Task.aspx" />
