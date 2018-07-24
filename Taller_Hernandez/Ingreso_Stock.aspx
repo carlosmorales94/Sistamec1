@@ -22,7 +22,7 @@
                 <div >  
           <table cellspacing="3" cellpadding="2" >
    <tr>
-       <td><asp:Label ID="LbBuscar" runat="server" Text="ID Producto:" ></asp:Label></td>
+       <td><asp:Label ID="LbBuscar" runat="server" Text="Buscar por ID Producto:" ></asp:Label></td>
        <td> <asp:TextBox ID="TxtBusIdPro" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox></td>
        <td> <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscar_Click" /> </td>                    
         <td><asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" OnClick="BtnEliminar_Click" /></td>
@@ -60,9 +60,7 @@
          </div>                      
             </div>
            </div>
-                <div align="center">
-        <asp:GridView ID="Ggvpro" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
-    </div>  
+          
        
                 
 </asp:Content>

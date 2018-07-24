@@ -14,25 +14,18 @@ namespace Taller_Hernandez
     public partial class Task : System.Web.UI.Page
     {
         ITareas tas = new MTareas();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             ITareas tas = new MTareas();
-            List<Tareas> listarTareas = tas.ListarTareas();
-            var vtas = listarTareas.Select(x => new { x.Descripciontask }).ToList();
-            Ggvtareas.DataSource = vtas;
-            Ggvtareas.DataBind();
-
-            
             List<Tareas> ListarTareas = tas.ListarTareas();
-            var lista = ListarTareas.Select(x => new { x.Descripciontask});
+            var lista = ListarTareas.Select(x => new { x.IdTask });
 
             try
             {
                 if (!Page.IsPostBack)
                 {
-                  //  lvTareas.DataSource = tas.ListarTareas();
-                  //  lvTareas.DataBind();
+                    lvTareas.DataSource = tas.ListarTareas();
+                    lvTareas.DataBind();
                 }
             }
             catch (Exception)
