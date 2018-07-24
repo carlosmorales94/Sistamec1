@@ -12,6 +12,7 @@ namespace Taller_Hernandez
 {
     public partial class Vista : System.Web.UI.Page
     {
+        ICita cit = new MCita();
         protected void Page_Load(object sender, EventArgs e)
         {
             ICita cit = new MCita();
@@ -52,5 +53,22 @@ namespace Taller_Hernandez
         {
 
         }
+        protected void Btnllegado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cita cita = new Cita
+                {
+                    Estado="Llegado",
+                };
+                cit.ActualizarCita(cita);
+                MostarMensaje("ChekIn Exitos");
+            }
+            catch (Exception)
+            {
+                MostarMensajeError("Ocurrio un error");
+            }
+        }
+        
     }
 }

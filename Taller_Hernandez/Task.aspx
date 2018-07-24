@@ -29,12 +29,12 @@
     </div>
     <br />
     <div class="container">
-        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div id="loginbox" style="margin-top: 10px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="panel-title">Mantenimiento de tareas</div>
                 </div>
-                <div style="padding-top: 30px" class="panel-body">
+                <div style="padding-top: 10px" class="panel-body">
                     <table cellspacing="3" cellpadding="2">
                         <tr>
                             <td>
@@ -65,10 +65,15 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" >
+        <table align="center">
+            <tr>
+                <td>Descripcion Tarea</td>
+            </tr>
+        </table>
         <asp:ListView ID="lvTareas" runat="server"
-            GroupItemCount="3"
-            ItemType="TallerH.DATA.Tareas" DataKeyNames="Idtask">
+            GroupItemCount="1"
+            ItemType="TallerH.DATA.Tareas" DataKeyNames="Descripciontask">
             <EmptyDataTemplate>
                 <table>
                     <tr>
@@ -88,12 +93,7 @@
                 <td runat="server">
                     <table align="center">
                         <tr>
-                            <td>Codigo</td>
-                            <td>Descripcion Tarea</td>
-                        </tr>
-                        <tr>
                             <td><%#: Item.Descripciontask %></td>
-                            <td><%#: Item.IdTask %></td>
                         </tr>
                     </table>
                     </p>

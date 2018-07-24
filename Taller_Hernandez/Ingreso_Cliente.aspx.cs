@@ -14,7 +14,7 @@ namespace Taller_Hernandez
     public partial class Ingreso_Cliente : System.Web.UI.Page
     {
         public int CedulaCita;
-        public int Vpaso;
+        public int pasocedula;
 
         ICliente cli = new MCliente();
         protected void Page_Load(object sender, EventArgs e)
@@ -28,7 +28,6 @@ namespace Taller_Hernandez
         }
         public void InsertarCliente()
         {
-            Vpaso = 0;
             try
             {
                 Cliente cliente = new Cliente
@@ -43,8 +42,7 @@ namespace Taller_Hernandez
                 };
                 cli.InsertarCliente(cliente);
                 MostarMensaje("Cliente se registro con exito");
-                Limpiar();
-                Vpaso = 1;
+                //Limpiar();
             }
             catch (Exception)
             {
@@ -60,6 +58,17 @@ namespace Taller_Hernandez
             TxtTelefono.Text = "";
             TxtCorreo.Text = "";
             TxtApellido.Text = "";
+        }
+        private void limppiar2()
+        {
+            TxtNCliente.Text = "";
+            TxtCedula.Text = "";
+            TxtMovil.Text = "";
+            TxtNota.Text = "";
+            TxtTelefono.Text = "";
+            TxtCorreo.Text = "";
+            TxtApellido.Text = "";
+            TxtBuscarCedula.Text = "";
         }
 
         private void MostarMensaje(string texto)
@@ -101,38 +110,24 @@ namespace Taller_Hernandez
             }
             catch (Exception)
             {
-                MostarMensajeError("Ocurrio un error");
+                MostarMensajeError("El Cliente no existe");
             }
         }
 
         protected void BtnAct_Click(object sender, EventArgs e)
         {
             Actualizar();
-            if (Vpaso==1)
-            {
-            Response.Redirect("citas.aspx?parametroced" + Convert.ToInt32(TxtCedula.Text)+"parametrocorreo"+ TxtCorreo.Text, false);
-            }
-            else
-            {
-                MostarMensajeError("Ocurrio un error al actualizar");
-            }
+           // Response.Redirect("citas.aspx?parametroced" + Convert.ToInt32(TxtCedula.Text)+"parametrocorreo"+ TxtCorreo.Text, false);          
         }
         protected void BtnAgendar_Click(object sender, EventArgs e)
         {
             InsertarCliente();
-            if(Vpaso==1)
-            {
             Response.Redirect("citas.aspx?parametroced" + Convert.ToInt32(TxtCedula.Text) + "parametrocorreo" + TxtCorreo.Text, false);
-            }
-            else
-            {
-                MostarMensajeError("Ocurrio un error al insertar cliente");
-            }
         }
 
         private void Actualizar()
         {
-            Vpaso = 0;
+            
             try
             {
                 Cliente cliente = new Cliente
@@ -148,7 +143,6 @@ namespace Taller_Hernandez
                 cli.ActualizarCliente(cliente);
                 MostarMensaje("Se actualizaron los datos del cliente con exito");
                 Limpiar();
-                Vpaso = 1;
             }
             catch (Exception)
             {

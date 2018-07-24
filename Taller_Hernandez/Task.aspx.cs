@@ -18,7 +18,7 @@ namespace Taller_Hernandez
         {
             ITareas tas = new MTareas();
             List<Tareas> ListarTareas = tas.ListarTareas();
-            var lista = ListarTareas.Select(x => new { x.IdTask });
+            var lista = ListarTareas.Select(x => new { x.Descripciontask});
 
             try
             {

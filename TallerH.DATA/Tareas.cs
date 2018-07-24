@@ -12,7 +12,7 @@ namespace TallerH.DATA
     public class Tareas
     {
         public string Descripciontask { get; set; }
-        public int IdTask { get; set; }
+      //  public int IdTask { get; set; }
 
     }
 }
