@@ -29,9 +29,9 @@ namespace TallerH.DAL.Metodos
         {
             _db.Insert(cita);
         }
-        public Cita BuscarCita(string fechaingreso)
+        public Cita BuscarCita(string placa)
         {
-            return _db.Select<Cita>(x => x.FechaIngreso == fechaingreso).FirstOrDefault();
+            return _db.Select<Cita>(x => x.Placa == placa).FirstOrDefault();
         }
         public void ActualizarCita(Cita cita)
         {

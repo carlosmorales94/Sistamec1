@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -53,7 +53,7 @@
                     <a class="navbar-brand" runat="server" href="~/Vista.aspx">Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">                    
                         <li><a runat="server" href="~/Ingreso_Cliente.aspx">Ingreso Cliente</a></li>
                         <li><a runat="server" href="~/Ingreso_Stock.aspx">Stock</a></li>
                         <li><a runat="server" href="~/DescontarStock.aspx">Sacar del Stock</a></li>

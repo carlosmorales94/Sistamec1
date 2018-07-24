@@ -14,7 +14,7 @@ namespace TallerH.DATA
         public string Cedula { get; set; }
         public string Marca { get; set; }
         public string ProVeh { get; set; }
-        public string FechaIngreso { get; set; }
+        public DateTime FechaIngreso { get; set; }
         public string Placa { get; set; }
         public string Estilo { get; set; }
         public int Ano { get; set; }
@@ -23,7 +23,5 @@ namespace TallerH.DATA
         public int KM { get; set; }
         public string RevisionIntervalos { get; set; }
         public string MantenimientoPrevio { get; set; }
-        public string DanosVehiculo { get; set; }
-        public string Estado { get; set; }
     }
 }

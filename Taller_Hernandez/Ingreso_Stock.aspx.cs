@@ -13,14 +13,13 @@ namespace Taller_Hernandez.UI
 {
     public partial class Ingreso_Stock : System.Web.UI.Page
     {
+        private int cantidad;
         IProducto prod = new MProducto();
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Producto> listaProd = prod.ListarProductos();
-            var vista = listaProd.Select(x => new { x.IdProducto,x.Descripcion,x.Precio,x.Cantidad }).ToList();
-            Ggvpro.DataSource = vista;
-            Ggvpro.DataBind();            
-        }       
+            //divMantenimiento.Visible = false;
+        }
+       
         protected void BtnProducto_Click(object sender, EventArgs e)
         {
             try
@@ -32,6 +31,7 @@ namespace Taller_Hernandez.UI
                     Cantidad = Convert.ToInt32(TxtCanPro.Text),
                     IdProducto=Convert.ToInt32(txtIdPro.Text)                    
                 };
+                IProducto prod = new MProducto();
                 prod.InsertarProducto(producto);
                 MostarMensaje("Producto Insertado");
                 limpiar();
