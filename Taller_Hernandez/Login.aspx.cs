@@ -30,7 +30,7 @@ namespace Taller_Hernandez
             }
         }
         protected void btnRegistrarse_Click(object sender, EventArgs e)
-        {
+        { /*
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
             con.Open();
             string query = "select * from Usuario where Username='" + txtUsuario.Text + "'and Password'" + txtContra.Text + "'";
@@ -47,7 +47,7 @@ namespace Taller_Hernandez
                 Response.Write("Usuario o contraseña incorrecto");
 
 
-            /* 
+            
              try
              {
                  IUsuario usu = new MUsuario();
@@ -71,7 +71,7 @@ namespace Taller_Hernandez
              catch (Exception)
              {
 
-             }
              }*/
+             }
         }
 }
