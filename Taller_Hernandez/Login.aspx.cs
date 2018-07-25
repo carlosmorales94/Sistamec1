@@ -30,32 +30,48 @@ namespace Taller_Hernandez
             }
         }
         protected void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                IUsuario usu = new MUsuario();
-                var usuario = usu.BuscarUsuario( txtUsuario .Text, UI.Encriptacion.Encriptar(txtContra .Text));
-                if (usuario != null)
-                {
-                    Response.Redirect("Ingreso_Vehiculo.aspx", false);
-                }
-                else
-                {
-                    mensaje.Visible = false;
-                    textoMensaje.InnerHtml = string.Empty;
-                    mensajeError.Visible = true;
-                    textoMensajeError.InnerHtml = "Usuario O Contraseña incorrecto";
-                    txtContra.Text = string.Empty;
-                    txtUsuario.Text = string.Empty;
-                    txtUsuario.Focus();
+        { /*
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+            con.Open();
+            string query = "select * from Usuario where Username='" + txtUsuario.Text + "'and Password'" + txtContra.Text + "'";
 
-                }
-            }
-            catch (Exception)
+            SqlCommand cmd = new SqlCommand(query, con);
+            string output = cmd.ExecuteScalar().ToString();
+
+            if (output == "1")
             {
-              
+                Session["user"] = txtUsuario.Text;
+                Response.Redirect("~/Ingreso_Vehiculo.aspx");
             }
-            }
-}
+            else
+                Response.Write("Usuario o contraseña incorrecto");
+
+
+            
+             try
+             {
+                 IUsuario usu = new MUsuario();
+                 var usuario = usu.BuscarUsuario( txtUsuario .Text, UI.Encriptacion.Encriptar(txtContra .Text));
+                 if (usuario != null)
+                 {
+                     Response.Redirect("Ingreso_Vehiculo.aspx", false);
+                 }
+                 else
+                 {
+                     mensaje.Visible = false;
+                     textoMensaje.InnerHtml = string.Empty;
+                     mensajeError.Visible = true;
+                     textoMensajeError.InnerHtml = "Usuario O Contraseña incorrecto";
+                     txtContra.Text = string.Empty;
+                     txtUsuario.Text = string.Empty;
+                     txtUsuario.Focus();
+
+                 }
+             }
+             catch (Exception)
+             {
+
+             }*/
+             }
+        }
 }
