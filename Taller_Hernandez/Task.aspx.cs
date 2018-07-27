@@ -17,21 +17,25 @@ namespace Taller_Hernandez
         protected void Page_Load(object sender, EventArgs e)
         {
             ITareas tas = new MTareas();
+            List<Tareas> listarTareas = tas.ListarTareas();
+            var vtas = listarTareas.Select(x => new { x.Descripciontask }).ToList();
+            Ggvtareas.DataSource = vtas;
+            Ggvtareas.DataBind();
             List<Tareas> ListarTareas = tas.ListarTareas();
             var lista = ListarTareas.Select(x => new { x.IdTask });
 
-            try
-            {
-                if (!Page.IsPostBack)
-                {
-                    lvTareas.DataSource = tas.ListarTareas();
-                    lvTareas.DataBind();
-                }
-            }
-            catch (Exception)
-            {
-                MostarMensajeError("Ocurrio un error");
-            }
+            //try
+            //{
+            //    if (!Page.IsPostBack)
+            //    {
+            //        lvTareas.DataSource = tas.ListarTareas();
+            //        lvTareas.DataBind();
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    MostarMensajeError("Ocurrio un error");
+            //}
 
         }
         private void Limpiar()

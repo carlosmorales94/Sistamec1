@@ -145,7 +145,7 @@ namespace Taller_Hernandez
                     // Marca = TxtMarca.Text,
                     ProVeh = TxtPro.Text,
                     Placa = TxtPlaca.Text,
-                    FechaIngreso = Calendar1.SelectedDate,
+                    FechaIngreso = Convert.ToString( Calendar1.SelectedDate),
                     Cedula = cedic,
                 };
                 ICita cit = new MCita();
