@@ -16,21 +16,16 @@ namespace Taller_Hernandez
         {
             ICita cit = new MCita();
             List<Cita> listaCita = cit.ListarCita();
-            var lista = listaCita.Select(x => new { x.FechaIngreso });
-            //ClFechas.DataSource = lista;
-            //ClFechas.DataBind();
-            try
-            {
-                if (!Page.IsPostBack)
-                {
-                    lvProductos.DataSource = cit.ListarCita();
-                    lvProductos.DataBind();
-                }
-            }
-            catch (Exception)
-            {
-                MostarMensajeError("Ocurrio un error");
-            }
+            List<Cita> listaCitaDatos = cit.ListarCitaDatos();
+            var lista = listaCitaDatos.Select(x => new { x.FechaIngreso });
+            var vplaca = listaCitaDatos.Select(x => new { x.Placa });
+            var vista = listaCita.Select(x => new { x.Estado, x.Cedula, x.FechaIngreso, x.KM, x.Marca, x.Placa }).ToList();
+            Ggvcitas.DataSource = vista;
+            Ggvcitas.DataBind();
+            Drpfecha.DataSource = lista;
+            Drpfecha.DataBind();
+            Drpplaca.DataSource = vplaca;
+            Drpplaca.DataBind();
         }
         private void MostarMensaje(string texto)
         {
@@ -52,5 +47,25 @@ namespace Taller_Hernandez
         {
 
         }
+        protected void Btnllegado_Click(object sender, EventArgs e)
+        {
+           // Actualizar();
+        }
+        //private void Actualizar()
+        //{
+        //    try
+        //    {
+        //        Cliente cliente = new Cliente
+        //        {
+        //            Cedula = "Llegado"
+        //        };
+        //        cli.ActualizarCliente(cliente);
+        //        MostarMensaje("Auto ingreso con exito");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MostarMensajeError("No se actualiza estado de la cita");
+        //    }
+        //}
     }
 }

@@ -163,8 +163,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Style\StyleSheet3.css" />
-    <Content Include="Style\StyleSheet4.css" />
+    <Content Include="Style\Css1.css" />
+    <Content Include="Style\Css2.css" />
     <Content Include="Task.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Vista.aspx" />

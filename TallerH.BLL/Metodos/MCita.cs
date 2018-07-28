@@ -20,19 +20,29 @@ namespace TallerH.BLL.Metodos
             cit.InsertarCita(cita);
 
         }
-        public Cita BuscarCita(string placa)
+        public Cita BuscarCita(string fechaingreso)
         {
-            return cit.BuscarCita(placa);
+            return cit.BuscarCita(fechaingreso);
         }
         public void ActualizarCita(Cita cita)
         {
             cit.ActualizarCita(cita);
         }
 
+        //public void ActualizarCitaestado(string estado)
+        //{
+        //    cit.ActualizarCitaestado(estado);
+        //}
+
         public void EliminarCita(string placa)
         {
             cit.EliminarCita(placa);
         }
+        public List<Cita> ListarCitaDatos()
+        {
+            return cit.ListarCita();
+        }
+
         public List<Cita> ListarCita()
         {
             return cit.ListarCita();

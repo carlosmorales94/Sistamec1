@@ -1,14 +1,13 @@
 ﻿body {
-    background-image:url("../Foto/original.jpg");
+   background-color:lightgoldenrodyellow;
     background-repeat: no-repeat;
     color:black;
     font-family:'Times New Roman', Times, serif;
-    color:antiquewhite;
+    color:black;
     font-size:medium;
     
    
 }
 h2, h3, h4{
-color:white;
+color:black;
 }
-

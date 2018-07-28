@@ -29,14 +29,30 @@ namespace TallerH.DAL.Metodos
         {
             _db.Insert(cita);
         }
-        public Cita BuscarCita(string placa)
+
+        public List<Cita> ListarCitaDatos()
         {
-            return _db.Select<Cita>(x => x.Placa == placa).FirstOrDefault();
+            return _db.Select<Cita>();
+        }
+
+        public List<Cita> ListarCitaListarCitaDatos()
+        {
+            return _db.Select<Cita>();
+        }
+
+        public Cita BuscarCita(string fechaingreso)
+        {
+            return _db.Select<Cita>(x => x.FechaIngreso == fechaingreso).FirstOrDefault();
         }
         public void ActualizarCita(Cita cita)
         {
             _db.Update(cita);
         }
+
+        //public Cita ActualizarCitaestado(string estado)
+        //{
+        //   return _db.Update<Cita>(x => x.Estado == estado);
+        //}
 
         public void EliminarCita(string placa)
         {

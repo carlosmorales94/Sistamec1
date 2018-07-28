@@ -1,22 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Task.aspx.cs" Inherits="Taller_Hernandez.Task" %>
 
-<%--
-<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo.aspx.cs" Inherits="Taller_Hernandez.Ingreso_Vehiculo" %>
 
---<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <div class="alert alert-success" visible="false" id="mensaje" runat="server">
@@ -65,60 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
-        <asp:ListView ID="lvTareas" runat="server"
-            GroupItemCount="3"
-            ItemType="TallerH.DATA.Tareas" DataKeyNames="Idtask">
-            <EmptyDataTemplate>
-                <table>
-                    <tr>
-                        <td>No data was returned.</td>
-                    </tr>
-                </table>
-            </EmptyDataTemplate>
-            <EmptyItemTemplate>
-                <td />
-            </EmptyItemTemplate>
-            <GroupTemplate>
-                <tr id="itemPlaceholderContainer" runat="server">
-                    <td id="itemPlaceholder" runat="server"></td>
-                </tr>
-            </GroupTemplate>
-            <ItemTemplate>
-                <td runat="server">
-                    <table align="center">
-                        <tr>
-                            <td>Codigo</td>
-                            <td>Descripcion Tarea</td>
-                        </tr>
-                        <tr>
-                            <td><%#: Item.Descripciontask %></td>
-                            <td><%#: Item.IdTask %></td>
-                        </tr>
-                    </table>
-                    </p>
-                </td>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
-                                    <tr id="groupPlaceholder"></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr></tr>
-                    </tbody>
-                </table>
-            </LayoutTemplate>
-        </asp:ListView>
+             <div align="center"> 
+        <asp:GridView ID="Ggvtareas" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView> 
     </div>
-
-
-
 </asp:Content>
