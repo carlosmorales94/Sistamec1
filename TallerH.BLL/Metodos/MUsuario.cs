@@ -5,11 +5,36 @@ using System.Text;
 using System.Threading.Tasks;
 using TallerH.DATA;
 using TallerH.BLL.Interfaces;
-
+using System.Data.Common;
+using System.Transactions;
+using TallerH.DAL;
 namespace TallerH.BLL.Metodos
 {
     public class MUsuario : IUsuario
     {
+        private static MUsuario instancia;
+
+        public static MUsuario Instancia
+        {
+            get
+            {
+                if (instancia == null)
+                {
+                    return new MUsuario();
+                }
+                return instancia;
+
+            }
+            set
+            {
+                if (instancia == null)
+                {
+                    instancia = value;
+                }
+            }
+        }
+
+
         DAL.Interfaces.IUsuario usu;
         public MUsuario()
         {
@@ -24,5 +49,26 @@ namespace TallerH.BLL.Metodos
         {
             usu.InsertarUsuario(usuario);
         }
+
+
+
+        public void Insertar(DATA.Usuario usuario)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+                    DAL.Metodos.MUsuario.Instancia.InsertarUsuario(usuario);
+                    scope.Complete();
+                }
+            }
+            catch (Exception ee)
+            {
+                throw;
+            }
+        }
+
+
+
     }
 }
