@@ -7,10 +7,8 @@ using TallerH.DATA;
 
 namespace TallerH.DAL.Interfaces
 {
-    public interface IEstilo
+    public interface IConfigcorreo
     {
-        List<Estilo> ListarEstilos();
-        void InsertarEstilos(Estilo estilo);
-        void EliminarEstilos(string descripcionestilo);
+        void ActualizarCorreo(Configcorreo configcorreo);
     }
 }

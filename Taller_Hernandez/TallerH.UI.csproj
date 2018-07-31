@@ -110,6 +110,8 @@
   <ItemGroup>
     <Content Include="CambioContrasena.aspx" />
     <Content Include="Citas.aspx" />
+    <Content Include="ConfCita.aspx" />
+    <Content Include="ConfCorreo.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -198,6 +200,20 @@
     </Compile>
     <Compile Include="Citas.aspx.designer.cs">
       <DependentUpon>Citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfCita.aspx.cs">
+      <DependentUpon>ConfCita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfCita.aspx.designer.cs">
+      <DependentUpon>ConfCita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfCorreo.aspx.cs">
+      <DependentUpon>ConfCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfCorreo.aspx.designer.cs">
+      <DependentUpon>ConfCorreo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cotizar.aspx.cs">
       <DependentUpon>Cotizar.aspx</DependentUpon>

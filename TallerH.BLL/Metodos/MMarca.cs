@@ -10,19 +10,23 @@ namespace TallerH.BLL.Metodos
 {
     public class MMarca : IMarca
     {
-        public void EliminarMarcas(string descripcionmarca)
+        DAL.Interfaces.IMarca mar;
+        public MMarca()
         {
-            throw new NotImplementedException();
+            mar = new DAL.Metodos.MMarca();
         }
-
-        public void InsertarMarcas(Marca marca)
+        public void EliminarMarca(string Descripmarca)
         {
-            throw new NotImplementedException();
+            mar.EliminarMarca(Descripmarca);
         }
-
-        public List<Marca> ListarMarcas()
+        public void InsertarMarca(Marca marca)
         {
-            throw new NotImplementedException();
+            mar.InsertarMarca(marca);
+
+        }
+        public List<Marca> ListarMarca()
+        {
+            return mar.ListarMarca();
         }
     }
 }

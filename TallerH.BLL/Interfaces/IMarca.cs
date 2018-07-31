@@ -9,8 +9,9 @@ namespace TallerH.BLL.Interfaces
 {
     public interface IMarca
     {
-        List<Marca> ListarMarcas();
-        void InsertarMarcas(Marca marca);
-        void EliminarMarcas(string descripcionmarca);
+        List<Marca> ListarMarca();
+        void InsertarMarca(Marca marca);
+        void EliminarMarca(string Descripmarca);
     }
 }
+

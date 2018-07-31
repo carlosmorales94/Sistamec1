@@ -62,6 +62,8 @@
                         <li><a runat="server" href="~/Citas.aspx">Citas</a></li>
                         <li><a runat="server" href="~/Cotizar.aspx">Cotizaciones</a></li>
                         <li><a runat="server" href="~/Task.aspx">Tareas</a></li>
+                        <li><a runat="server" href="~/ConfCorreo.aspx">Correo</a></li>
+                        <li><a runat="server" href="~/ConfCita.aspx">ConfCita</a></li>
                     </ul>
                 </div>
             </div>

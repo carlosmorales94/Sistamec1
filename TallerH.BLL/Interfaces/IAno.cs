@@ -7,10 +7,10 @@ using TallerH.DATA;
 
 namespace TallerH.BLL.Interfaces
 {
-    public interface IEstilo
+    public interface IAno
     {
-        List<Estilo> ListarEstilos();
-        void InsertarEstilos(Estilo estilo);
-        void EliminarEstilos(string descripcionestilo);
+        List<Ano> ListarAno();
+        void InsertarAno(Ano ano);
+        void EliminarAno(int Descripano);
     }
 }

@@ -10,29 +10,27 @@ using TallerH.DAL.Interfaces;
 
 namespace TallerH.DAL.Metodos
 {
-    public class MEstilo : IEstilo
+    public class MAno : IAno
     {
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
-        public MEstilo()
+        public MAno()
         {
             _conexion = new OrmLiteConnectionFactory(BD.Default.conexion,
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public void EliminarEstilos(string descripcionestilo)
+        public void InsertarAno(Ano ano)
         {
-            _db.Delete<Estilo>(x => x.DescripcionEstilo == descripcionestilo);
+            _db.Insert(ano);
         }
-
-        public void InsertarEstilos(Estilo estilo)
+        public void EliminarAno(int descripano)
         {
-            _db.Insert(estilo);
+            _db.Delete<Ano>(x => x.Descripano == descripano);
         }
-
-        public List<Estilo> ListarEstilos()
+        public List<Ano> ListarAno()
         {
-            return _db.Select<Estilo>();
+            return _db.Select<Ano>();
         }
     }
 }

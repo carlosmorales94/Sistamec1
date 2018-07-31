@@ -10,27 +10,20 @@ using TallerH.DAL.Interfaces;
 
 namespace TallerH.DAL.Metodos
 {
-    public class MMarca : IMarca
+    public class MConfigcorreo : IConfigcorreo
     {
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
-        public MMarca()
+        public MConfigcorreo()
         {
             _conexion = new OrmLiteConnectionFactory(BD.Default.conexion,
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public void InsertarMarca(Marca marca)
+
+        public void ActualizarCorreo(Configcorreo configcorreo)
         {
-            _db.Insert(marca);
-        }
-        public void EliminarMarca(string descripmarca)
-        {
-            _db.Delete<Marca>(x => x.Descripmarca == descripmarca);
-        }
-        public List<Marca> ListarMarca()
-        {
-            return _db.Select<Marca>();
+            _db.Update(configcorreo);
         }
     }
 }

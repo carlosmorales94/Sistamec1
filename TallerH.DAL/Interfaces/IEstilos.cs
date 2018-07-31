@@ -7,10 +7,10 @@ using TallerH.DATA;
 
 namespace TallerH.DAL.Interfaces
 {
-    public interface IMarca
+    public interface IEstilos
     {
-        List<Marca> ListarMarca();
-        void InsertarMarca(Marca marca);
-        void EliminarMarca(string Descripmarca);
+        List<Estilos> ListarEstilo();
+        void InsertarEstilo(Estilos estilo);
+        void EliminarEstilo(string Descripestilo);
     }
 }

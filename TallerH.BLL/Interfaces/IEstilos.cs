@@ -7,11 +7,10 @@ using TallerH.DATA;
 
 namespace TallerH.BLL.Interfaces
 {
-    public interface ITareas
+    public interface IEstilos
     {
-        List<Tareas> ListarTareas();
-        void InsertarTareas(Tareas tareas);
-        void EliminarTareas(string descripciontask);
+        List<Estilos> ListarEstilo();
+        void InsertarEstilo(Estilos estilo);
+        void EliminarEstilo(string descripestilo);
     }
-
 }
