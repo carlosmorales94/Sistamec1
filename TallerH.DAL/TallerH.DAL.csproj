@@ -60,21 +60,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IEstilo.cs" />
+    <Compile Include="Interfaces\IAno.cs" />
     <Compile Include="Interfaces\IAuto.cs" />
     <Compile Include="Interfaces\ICita.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IConfigcorreo.cs" />
     <Compile Include="Interfaces\IDescProducto.cs" />
+    <Compile Include="Interfaces\IEstilos.cs" />
     <Compile Include="Interfaces\IFacturass.cs" />
     <Compile Include="Interfaces\IHistorial.cs" />
+    <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\ITareas.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="Metodos\MAno.cs" />
     <Compile Include="Metodos\MAuto.cs" />
     <Compile Include="Metodos\MCita.cs" />
     <Compile Include="Metodos\MCliente.cs" />
+    <Compile Include="Metodos\MConfigcorreo.cs" />
     <Compile Include="Metodos\MDescProducto.cs" />
+    <Compile Include="Metodos\MEstilos.cs" />
     <Compile Include="Metodos\MFacturass.cs" />
     <Compile Include="Metodos\MHistorial.cs" />
+    <Compile Include="Metodos\MMarca.cs" />
     <Compile Include="Metodos\MProducto.cs" />
     <Compile Include="Metodos\MTareas.cs" />
     <Compile Include="Metodos\MUsuario.cs" />

@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TallerH.DATA;
-using ServiceStack.DataAnnotations;
 
-namespace TallerH.DATA
+namespace TallerH.BLL.Interfaces
 {
-    [Alias("Marca")]
-    public class Marca
+    public interface IConfigcorreo
     {
-        public string Descripmarca {get ; set; }
+        void ActualizarCorreo(Configcorreo Configcorreo);
     }
 }

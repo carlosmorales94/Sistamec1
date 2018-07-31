@@ -8,10 +8,9 @@ using ServiceStack.DataAnnotations;
 
 namespace TallerH.DATA
 {
-    [Alias("Estilo")]
-    public class Estilo
+    [Alias("Ano")]
+    public class Ano
     {
-        public string DescripcionEstilo { get; set; }
-        public int IdEstilo { get; set; }
+        public int Descripano { get; set; }
     }
 }

@@ -281,6 +281,18 @@ table {
   .table th {
     background-color: #fff !important;
   }
+
+
+  .panel1 {
+  width: 50%;
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 5px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 20px 12px rgba(0, 0, 0, 0.05);
+}
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;

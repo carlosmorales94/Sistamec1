@@ -10,27 +10,27 @@ using TallerH.DAL.Interfaces;
 
 namespace TallerH.DAL.Metodos
 {
-    public class MMarca : IMarca
+    public class MEstilos : IEstilos
     {
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
-        public MMarca()
+        public MEstilos()
         {
             _conexion = new OrmLiteConnectionFactory(BD.Default.conexion,
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public void InsertarMarca(Marca marca)
+        public void InsertarEstilo(Estilos estilo)
         {
-            _db.Insert(marca);
+            _db.Insert(estilo);
         }
-        public void EliminarMarca(string descripmarca)
+        public void EliminarEstilo(string descripestilo)
         {
-            _db.Delete<Marca>(x => x.Descripmarca == descripmarca);
+            _db.Delete<Estilos>(x => x.Descripestilo == descripestilo);
         }
-        public List<Marca> ListarMarca()
+        public List<Estilos> ListarEstilo()
         {
-            return _db.Select<Marca>();
+            return _db.Select<Estilos>();
         }
     }
 }
