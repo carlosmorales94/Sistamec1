@@ -26,8 +26,8 @@ namespace TallerH.DAL {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TI-MOISES\\SQL14;Initial Catalog=TallerHernandez;User ID=sa;Password=D" +
-            "esarrollo2017")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP\\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=T" +
+            "rue")]
         public string conexion {
             get {
                 return ((string)(this["conexion"]));

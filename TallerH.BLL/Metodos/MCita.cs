@@ -20,7 +20,7 @@ namespace TallerH.BLL.Metodos
             cit.InsertarCita(cita);
 
         }
-        public Cita BuscarCita(string fechaingreso)
+        public Cita BuscarCita(DateTime fechaingreso)
         {
             return cit.BuscarCita(fechaingreso);
         }
@@ -38,14 +38,18 @@ namespace TallerH.BLL.Metodos
         {
             cit.EliminarCita(placa);
         }
-        public List<Cita> ListarCitaDatos()
-        {
-            return cit.ListarCita();
-        }
+        //public List<Cita> ListarCitaDatos(DateTime fechaingreso)
+        //{
+        //    return cit.ListarCita( fechaingreso);
+        //}
 
-        public List<Cita> ListarCita()
+        //public List<Cita> ListarCita()
+        //{
+        //    return cit.ListarCita();
+        //}
+        public List<Cita> ListarCita(DateTime fechaingreso)
         {
-            return cit.ListarCita();
+            return cit.ListarCita(fechaingreso);
         }
     }
 }

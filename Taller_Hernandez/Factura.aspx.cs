@@ -70,6 +70,13 @@ namespace Taller_Hernandez
         {            
             suma();
         }
+
+
+        protected void Btn_facelec_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\USUARIO\Documents\Releases\FacturaElectronicaCR-master\FacturaElectronicaCR_VB\bin\Debug\FacturaElectronicaCR_VB.exe");
+
+        }
         public void suma()
             {
                 int v1 = Convert.ToInt32(TextBox1.Text);

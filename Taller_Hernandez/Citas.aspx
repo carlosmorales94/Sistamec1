@@ -30,10 +30,8 @@
                                 <td>
                                     <asp:Label ID="LbPlaca" runat="server" Text="Placa:"></asp:Label></td>
                                 <td>
-                                    <asp:TextBox ID="TxtPlaca" runat="server" CssClass="form-control"></asp:TextBox></td>
+                                    <asp:TextBox ID="TxtPlaca" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox></td>
                             </tr>
-
-
                             <tr>
                                 <td>
                                     <asp:Label ID="lbEstilo" runat="server" Text="Movil:"></asp:Label></td>
@@ -44,7 +42,7 @@
                                 <td>
                                     <asp:Label ID="LbBin" runat="server" Text="Bin:"></asp:Label></td>
                                 <td>
-                                    <asp:TextBox ID="TxtBin" runat="server" CssClass="form-control"></asp:TextBox></td>
+                                    <asp:TextBox ID="TxtBin" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox></td>
                             </tr>
                              <tr>
                                 <td>
@@ -56,19 +54,21 @@
                                 <td>
                                     <asp:Label ID="LbKM" runat="server" Text="Kilometraje:"></asp:Label></td>
                                 <td>
-                                    <asp:TextBox ID="TxtKM" runat="server" CssClass="form-control"></asp:TextBox></td>
+                                    <asp:TextBox ID="TxtKM" runat="server" CssClass="form-control" TextMode="Number" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:Label ID="LbProVeh" runat="server" Text="Problemas del Vehiculo:"></asp:Label></td>
                                 <td>
-                                    <asp:TextBox ID="TxtPro" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox></td>
+                                    <asp:TextBox ID="TxtPro" runat="server" CssClass="form-control" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:Label ID="LbFecha" runat="server" Text="Fecha de la Cita:"></asp:Label></td>
                                 <td>
-                                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                                    <asp:Calendar ID="Calendar1" runat="server">
+                                        <DayStyle BorderStyle="None" />
+                                    </asp:Calendar>
                                 </td>
                             </tr>
                             <tr>

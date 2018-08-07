@@ -10,6 +10,7 @@
         <strong id="textoMensajeError" runat="server"></strong>
          <br>
     </div>
+    <asp:Button ID="Btn_facelec" runat="server" Text="Factura Electronica" OnClick="Btn_facelec_Click"/>
         <div class="container">
         <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info">

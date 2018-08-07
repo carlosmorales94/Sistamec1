@@ -17,14 +17,20 @@
             <tr>
                 <h2><%= DateTime.Now.ToShortDateString() %></h2>
             </tr>
-            <tr>
+<%--            <tr>
                 <td>
                     <h4>Fecha:</h4>
                 </td>
+                </tr>--%>
+            <tr>
                 <td>
-                    <asp:DropDownList ID="Drpfecha" runat="server" CssClass="form-control" Width="150px"></asp:DropDownList></td>
+                    <%--<asp:DropDownList ID="Drpfecha" runat="server" CssClass="form-control" Width="150px"></asp:DropDownList>--%>
+                   <asp:Calendar ID="Clcita" runat="server" CaptionAlign="Left"></asp:Calendar>
+                        </td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscar_Click" /></td>
+                    <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscar_Click" />
+ 
+                </td>
             </tr>
         </table>
     </div>

@@ -9,11 +9,12 @@ namespace TallerH.BLL.Interfaces
 {
     public interface ICita
     {
-        List<Cita> ListarCita();
-        List<Cita> ListarCitaDatos();
+        //List<Cita> ListarCita();
+        List<Cita> ListarCita(DateTime fechaingreso);
+        //List<Cita> ListarCitaDatos();
         void ActualizarCita(Cita cita);
        // void ActualizarCitaestado(string estado);
-        Cita BuscarCita(string placa);
+        Cita BuscarCita(DateTime fechaingreso);
         void InsertarCita(Cita cita);
         void EliminarCita(string placa);
     }
