@@ -13,15 +13,47 @@ namespace Taller_Hernandez
 {
     public partial class CrearUsuario : System.Web.UI.Page
     {
+
+        TallerH.BLL.Metodos.MUsuario procesar = new MUsuario();
+        TallerH.DATA.Usuario usuario;
+
+
         int fact;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+
+
+        private void GetValues()
+        {
+            usuario = new TallerH.DATA.Usuario
+            {
+                Username = TxtUsuarioIns.Text,
+                Password = TxtcontraseñaIns.Text,
+                IdPerfil = 1,
+                Ingreso=2
+               
+                /* IRiesgo = cbRiesgo.Text.ToString(),
+                 DValor = Convert.ToDouble(txtValor.Text),
+                 DPromedio = Convert.ToDouble(txtPromedio.Text),
+                 DMaxValor = Convert.ToDouble(txtMax.Text),
+                 DMinValor = Convert.ToDouble(txtMin.Text),
+                 IEncripcion = cbEncripcion.Text.ToString(),
+                 DtFecha = dtpFecha.Value*/
+            };
+        }
+
+
         protected void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            try
+
+            GetValues();
+            procesar.Insertar(usuario);
+
+            textoMensaje.InnerHtml = "Usuario Creado";
+            /*try
             {
                 IUsuario usu = new MUsuario();
                 var nombreUsuario = usu.BuscarUsuario(TxtUsuarioIns.Text, UI.Encriptacion.Encriptar(TxtcontraseñaIns.Text));
@@ -87,6 +119,8 @@ namespace Taller_Hernandez
             mensajeError.Visible = true;
             textoMensajeError.InnerHtml = texto;
             textoMensaje.InnerHtml = string.Empty;
+        }
+    }*/
         }
     }
 }

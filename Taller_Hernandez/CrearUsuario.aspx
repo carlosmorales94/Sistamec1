@@ -72,10 +72,10 @@
                                     </td>
                                 </tr>
                                                                 <tr>
-                                    <td>
+                                    <td style="height: 26px">
                                         <asp:Label ID="LbConfiguracion" runat="server" Text="Configuración"></asp:Label>
                                     </td>
-                                    <td>
+                                    <td style="height: 26px">
                                         <asp:RadioButton ID="rdconfiguracion" runat="server" />
                                     </td>
                                 </tr>
