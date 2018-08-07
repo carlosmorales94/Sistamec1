@@ -12,20 +12,21 @@ namespace Taller_Hernandez
 {
     public partial class Vista : System.Web.UI.Page
     {
+        ICita cit = new MCita();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ICita cit = new MCita();
-            List<Cita> listaCita = cit.ListarCita();
-            List<Cita> listaCitaDatos = cit.ListarCitaDatos();
-            var lista = listaCitaDatos.Select(x => new { x.FechaIngreso });
-            var vplaca = listaCitaDatos.Select(x => new { x.Placa });
-            var vista = listaCita.Select(x => new { x.Estado, x.Cedula, x.FechaIngreso, x.KM, x.Marca, x.Placa }).ToList();
-            Ggvcitas.DataSource = vista;
-            Ggvcitas.DataBind();
-            Drpfecha.DataSource = lista;
-            Drpfecha.DataBind();
-            Drpplaca.DataSource = vplaca;
-            Drpplaca.DataBind();
+            
+            //List<Cita> listaCita = cit.ListarCita();
+            //List<Cita> listaCitaDatos = cit.ListarCitaDatos();
+            //var lista = listaCitaDatos.Select(x => new { x.FechaIngreso });
+            //var vplaca = listaCitaDatos.Select(x => new { x.Placa });
+            //var vista = listaCita.Select(x => new { x.Estado, x.Cedula, x.FechaIngreso, x.KM, x.Marca, x.Placa }).ToList();
+            //Ggvcitas.DataSource = vista;
+            //Ggvcitas.DataBind();
+            //Drpfecha.DataSource = lista;
+            //Drpfecha.DataBind();
+            //Drpplaca.DataSource = vplaca;
+            //Drpplaca.DataBind();
         }
         private void MostarMensaje(string texto)
         {
@@ -45,7 +46,24 @@ namespace Taller_Hernandez
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                var vista = cit.BuscarCita(Clcita.SelectedDate); /*cli.BuscarCliente(Convert.ToInt32(TxtBuscarCedula.Text));*/
+                if (Clcita.SelectedDate != null)
+                {
+                    Ggvcitas.DataSource = vista;
+                    Ggvcitas.DataBind();
+                }
+                else
+                {
+                    MostarMensajeError("El Cliente no existe");
+                }
+            }
+            catch (Exception)
+            {
+                MostarMensajeError("Ocurrio un error");
+            }
         }
         protected void Btnllegado_Click(object sender, EventArgs e)
         {

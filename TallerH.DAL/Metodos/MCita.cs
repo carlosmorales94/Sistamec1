@@ -20,7 +20,7 @@ namespace TallerH.DAL.Metodos
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public List<Cita> ListarCita()
+        public List<Cita> ListarCita(DateTime fechaingreso)
         {
             return _db.Select<Cita>();
         }
@@ -40,7 +40,7 @@ namespace TallerH.DAL.Metodos
             return _db.Select<Cita>();
         }
 
-        public Cita BuscarCita(string fechaingreso)
+        public Cita BuscarCita(DateTime fechaingreso)
         {
             return _db.Select<Cita>(x => x.FechaIngreso == fechaingreso).FirstOrDefault();
         }

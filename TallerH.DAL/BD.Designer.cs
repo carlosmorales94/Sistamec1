@@ -33,5 +33,14 @@ namespace TallerH.DAL {
                 return ((string)(this["conexion"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("System.Data.SqlClient")]
+        public string proveedor {
+            get {
+                return ((string)(this["proveedor"]));
+            }
+        }
     }
 }

@@ -15,5 +15,7 @@ namespace TallerH.DATA
         public int Citas { get; set; }
         public int Configuracion { get; set; }
         public int Reportes { get; set; }
+        public int IdPerfil { get; set; }
+        public int Ingreso { get; set; }
     }
 }
