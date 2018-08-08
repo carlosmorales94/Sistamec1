@@ -31,19 +31,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ServiceStack.Common">
-      <HintPath>E:\00\0000\Dll\ServiceStack.Common.dll</HintPath>
+      <HintPath>..\Dll\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>E:\00\0000\Dll\ServiceStack.Interfaces.dll</HintPath>
+      <HintPath>..\Dll\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite">
-      <HintPath>E:\00\0000\Dll\ServiceStack.OrmLite.dll</HintPath>
+      <HintPath>..\Dll\ServiceStack.OrmLite.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.OrmLite.SqlServer">
-      <HintPath>E:\00\0000\Dll\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <HintPath>..\Dll\ServiceStack.OrmLite.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text">
-      <HintPath>E:\00\0000\Dll\ServiceStack.Text.dll</HintPath>
+      <HintPath>..\Dll\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
