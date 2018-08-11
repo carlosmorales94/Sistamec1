@@ -25,16 +25,16 @@ namespace Taller_Hernandez
         protected void Page_Load(object sender, EventArgs e)
         {
             List<Ano> listaAno = vano.ListarAno();
-            var listaA = listaAno.Select(x => new { x.Descripano});
+            var listaA = listaAno.Select(x => new { x.Descripano });
             Drpano.DataSource = listaA;
             Drpano.DataBind();
             List<Estilos> listaEstilo = vest.ListarEstilo();
             var listaE = listaEstilo.Select(x => new { x.Descripestilo });
-            DrpEstilo .DataSource = listaE;
+            DrpEstilo.DataSource = listaE;
             DrpEstilo.DataBind();
             List<Marca> listaMarca = vmar.ListarMarca();
             var listaM = listaMarca.Select(x => new { x.Descripmarca });
-            DrpMarca .DataSource = listaM;
+            DrpMarca.DataSource = listaM;
             DrpMarca.DataBind();
 
             if (Request.Params["parametroced"] != null | Request.Params["parametroced"] != null)
@@ -43,8 +43,10 @@ namespace Taller_Hernandez
                 correoic = Request.Params["parametrocorreo"];
             }
         }
+    }
+}
 
-        protected void BtnAgendar_Click(object sender, EventArgs e)
+      /*  protected void BtnAgendar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -53,11 +55,11 @@ namespace Taller_Hernandez
                     ProVeh = TxtPro.Text,
                     Placa = TxtPlaca.Text,
                     FechaIngreso = Calendar1.SelectedDate,
-                    Cedula = "1",
+                    Cedula = 1,
                     Estado = "Pendiente",
                     Marca = DrpMarca.Text,
                     Estilo = "4x4",//DrpEstilo.Text,
-                    Ano = 200, //Convert.ToInt32(Drpano.Text),
+                    Ano = 15/08/18, //Convert.ToInt32(Drpano.Text),
                     Nota = "Nada",
                     Bin = Convert.ToInt32(TxtBin.Text),
                     KM = Convert.ToInt32(TxtKM.Text),
@@ -138,4 +140,4 @@ namespace Taller_Hernandez
             textoMensaje.InnerHtml = string.Empty;
         }
     }
-}
+}*/

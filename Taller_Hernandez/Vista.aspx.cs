@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +14,8 @@ namespace Taller_Hernandez
 {
     public partial class Vista : System.Web.UI.Page
     {
+
+        public SqlConnection cn = new SqlConnection(@"Data Source=LAPTOP-JNT2CUC4;Initial Catalog=TallerHernandez;Integrated Security=True");
         ICita cit = new MCita();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,28 +50,41 @@ namespace Taller_Hernandez
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            /* try
+             {
 
-                var vista = cit.BuscarCita(Clcita.SelectedDate); /*cli.BuscarCliente(Convert.ToInt32(TxtBuscarCedula.Text));*/
-                if (Clcita.SelectedDate != null)
-                {
-                    Ggvcitas.DataSource = vista;
-                    Ggvcitas.DataBind();
-                }
-                else
-                {
-                    MostarMensajeError("El Cliente no existe");
-                }
-            }
-            catch (Exception)
-            {
-                MostarMensajeError("Ocurrio un error");
-            }
+                 var vista = cit.BuscarCita(Clcita.SelectedDate); /*cli.BuscarCliente(Convert.ToInt32(TxtBuscarCedula.Text));
+                 if (Clcita.SelectedDate != null)
+                 {
+                     Ggvcitas.DataSource = vista;
+                     Ggvcitas.DataBind();
+                 }
+                 else
+                 {
+                     MostarMensajeError("El Cliente no existe");
+                 }
+             }
+             catch (Exception)
+             {
+                 MostarMensajeError("Ocurrio un error");
+             }*/
+
+            SqlDataAdapter da = new SqlDataAdapter("Mostrar", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@fechaIngreso", SqlDbType.DateTime).Value = Clcita.SelectedDate;
+           
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            this.Ggvcitas.DataSource = dt;
         }
         protected void Btnllegado_Click(object sender, EventArgs e)
         {
            // Actualizar();
+        }
+
+        protected void Clcita_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
         //private void Actualizar()
         //{

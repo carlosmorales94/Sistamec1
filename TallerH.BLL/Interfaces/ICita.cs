@@ -17,5 +17,6 @@ namespace TallerH.BLL.Interfaces
         Cita BuscarCita(DateTime fechaingreso);
         void InsertarCita(Cita cita);
         void EliminarCita(string placa);
+        List<Cita> Mostar();
     }
 }
