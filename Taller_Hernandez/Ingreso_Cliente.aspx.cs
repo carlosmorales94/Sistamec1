@@ -77,7 +77,6 @@ namespace Taller_Hernandez
         {
             try
             {
-
                 var cliente = cli.BuscarCliente(Convert.ToInt32(TxtBuscarCedula.Text));
                 if (TxtBuscarCedula != null)
                 {
@@ -103,13 +102,13 @@ namespace Taller_Hernandez
         protected void BtnAct_Click(object sender, EventArgs e)
         {
             Actualizar();
-            Response.Redirect("citas.aspx?parametroced" + Convert.ToInt32(TxtCedula.Text) + "parametrocorreo" + TxtCorreo.Text, false);
+            Response.Redirect("citas.aspx?parametro=" + Convert.ToInt32(TxtCedula.Text) + TxtCorreo.Text);
 
         }
         protected void BtnAgendar_Click(object sender, EventArgs e)
         {
             InsertarCliente();
-            Response.Redirect("citas.aspx?parametroced" + Convert.ToInt32(TxtCedula.Text) + "parametrocorreo" + TxtCorreo.Text, false);
+            Response.Redirect("citas.aspx?parametro=" + Convert.ToInt32(TxtCedula.Text)+ TxtCorreo.Text );
         }
 
         private void Actualizar()
@@ -150,6 +149,11 @@ namespace Taller_Hernandez
                 MostarMensajeError("Ocurrio un error");
                 Limpiar();
             }
+
+        }
+
+        protected void TxtCedula_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEstilo.cs" />
     <Compile Include="Interfaces\IAno.cs" />
     <Compile Include="Interfaces\IAuto.cs" />
     <Compile Include="Interfaces\ICita.cs" />
