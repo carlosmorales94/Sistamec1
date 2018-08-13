@@ -24,14 +24,13 @@
                 </tr>--%>
             <tr>
                 <td>
-                    <%--<asp:DropDownList ID="Drpfecha" runat="server" CssClass="form-control" Width="150px"></asp:DropDownList>--%>
-                   <asp:Calendar ID="Clcita" runat="server" CaptionAlign="Left" OnSelectionChanged="Clcita_SelectionChanged"></asp:Calendar>
+                     <%--<asp:DropDownList ID="DrpMarca" runat="server"></asp:DropDownList></td>--%>
+                    <asp:DropDownList ID="Drpfecha" runat="server" CssClass="form-control" Width="120px"  ></asp:DropDownList>
+               <%--    <asp:Calendar ID="Clcita" runat="server" CaptionAlign="Left" OnSelectionChanged="Clcita_SelectionChanged"></asp:Calendar>--%>
                         </td>
                 <td>
                     <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscar_Click" />
- 
                 </td>
-
                 <td>
                     &nbsp;</td>
             </tr>
@@ -47,7 +46,7 @@
             <asp:DropDownList ID="Drpplaca" runat="server" CssClass="form-control" Width="150px"></asp:DropDownList>
         </td>
         <td>
-            <asp:Button ID="Btnllegado" runat="server" Text="Llegado" CssClass="btn btn-primary" OnClick="Btnllegado_Click" />
+            <asp:Button ID="Btnllegado" runat="server" Text="Check In" CssClass="btn btn-primary" OnClick="Btnllegado_Click" />
         </td>
     </tr>
     </table>

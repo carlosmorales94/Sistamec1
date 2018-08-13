@@ -12,14 +12,34 @@ using TallerH.DATA;
 
 namespace Taller_Hernandez
 {
+
     public partial class Vista : System.Web.UI.Page
     {
-
-        public SqlConnection cn = new SqlConnection(@"Data Source=LAPTOP-JNT2CUC4;Initial Catalog=TallerHernandez;Integrated Security=True");
+        public SqlConnection cn = new SqlConnection(@"Data Source=HP\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=True");
         ICita cit = new MCita();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //SqlCommand cm = new SqlCommand("Select FechaIngreso from Cita;", cn);
+            //cn.Open();
+            //SqlDataReader dr = cm.ExecuteReader();
+            //while(dr.Read() == true)
+            //{
+            //    Drpfecha.Items.Add(dr[0].ToString());
+            //}
+            //cn.Close();
+
+            SqlDataAdapter da = new SqlDataAdapter("Mostrar", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@FechaIngreso", SqlDbType.NVarChar).Value = "2018-08-12"; // DateTime.Now.ToShortDateString();
+            DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //this.Ggvcitas.DataSource = dt;
+
+            Ggvcitas.DataSource = dt;
+            Ggvcitas.DataBind();
+            cn.Close();
+
             //List<Cita> listaCita = cit.ListarCita();
             //List<Cita> listaCitaDatos = cit.ListarCitaDatos();
             //var lista = listaCitaDatos.Select(x => new { x.FechaIngreso });
@@ -71,11 +91,15 @@ namespace Taller_Hernandez
 
             SqlDataAdapter da = new SqlDataAdapter("Mostrar", cn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@fechaIngreso", SqlDbType.DateTime).Value = Clcita.SelectedDate;
-           
+            da.SelectCommand.Parameters.Add("@FechaIngreso", SqlDbType.NVarChar).Value = Drpfecha.Text.ToString();           
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            this.Ggvcitas.DataSource = dt;
+            //da.Fill(dt);
+            //this.Ggvcitas.DataSource = dt;
+
+            Ggvcitas.DataSource = dt;
+            Ggvcitas.DataBind();
+
+            //cn.Close();
         }
         protected void Btnllegado_Click(object sender, EventArgs e)
         {
@@ -83,6 +107,11 @@ namespace Taller_Hernandez
         }
 
         protected void Clcita_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Drpfecha_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

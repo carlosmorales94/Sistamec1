@@ -40,7 +40,7 @@
                         </tr>
                         <tr>
                             <td><asp:Label ID="LbCedula" runat="server" Text="Cedula.......:"></asp:Label></td>
-                            <td><asp:TextBox ID="TxtCedula" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox></td>
+                            <td><asp:TextBox ID="TxtCedula" runat="server" CssClass="form-control"  MaxLength="9" OnTextChanged="TxtCedula_TextChanged"></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td><asp:Label ID="LbTelefono" runat="server" Text="Telefono......:"></asp:Label></td>
@@ -52,14 +52,14 @@
                         </tr>
                         <tr>
                             <td><asp:Label ID="LbCorreo" runat="server" Text="Correo........:"></asp:Label></td>
-                            <td><asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox></td>
+                            <td><asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" MaxLength="90" TextMode="Email"></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td><asp:Label ID="LbNota" runat="server" Text="Nota.........:"></asp:Label></td>
                             <td><asp:TextBox ID="TxtNota" runat="server" CssClass="form-control"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td><asp:Button ID="BtnCliente" runat="server" Text="Aceptar" CssClass="btn btn-success" OnClick="BtnCliente_Click" /></td>
+                            <td><asp:Button ID="BtnCliente" runat="server" Text="Agregar" CssClass="btn btn-success" OnClick="BtnCliente_Click" /></td>
                             <td><asp:Button ID="BtnAct" runat="server" Text="Actualizar" CssClass="btn btn-primary" OnClick="BtnAct_Click" /></td>
                             <td><asp:Button ID="BtnAgendar" runat="server" Text="Agendar" CssClass="btn btn-primary" OnClick="BtnAgendar_Click" /></td>
                         </tr>

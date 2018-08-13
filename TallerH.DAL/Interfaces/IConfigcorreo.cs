@@ -10,5 +10,7 @@ namespace TallerH.DAL.Interfaces
     public interface IConfigcorreo
     {
         void ActualizarCorreo(Configcorreo configcorreo);
+        void Actualizar(Configcorreo config);
+        List<Configcorreo> ListarCorreo();
     }
 }

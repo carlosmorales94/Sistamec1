@@ -49,13 +49,13 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl textoMensajeError;
         
         /// <summary>
-        /// Clcita control.
+        /// Drpfecha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Clcita;
+        protected global::System.Web.UI.WebControls.DropDownList Drpfecha;
         
         /// <summary>
         /// BtnBuscar control.

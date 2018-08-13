@@ -30,7 +30,7 @@
                                 <td>
                                     <asp:Label ID="LbPlaca" runat="server" Text="Placa:"></asp:Label></td>
                                 <td>
-                                    <asp:TextBox ID="TxtPlaca" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox></td>
+                                    <asp:TextBox ID="TxtPlaca" runat="server" CssClass="form-control" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>

@@ -10,6 +10,8 @@ using System.Transactions;
 namespace TallerH.BLL.Metodos
 {
     public class MCita : ICita
+
+
     {
         DAL.Interfaces.ICita cit;
         public MCita()
@@ -21,7 +23,7 @@ namespace TallerH.BLL.Metodos
             cit.InsertarCita(cita);
 
         }
-        public Cita BuscarCita(DateTime fechaingreso)
+        public Cita BuscarCita(string fechaingreso)
         {
             return cit.BuscarCita(fechaingreso);
         }
@@ -48,7 +50,7 @@ namespace TallerH.BLL.Metodos
         //{
         //    return cit.ListarCita();
         //}
-        public List<Cita> ListarCita(DateTime fechaingreso)
+        public List<Cita> ListarCita(string fechaingreso)
         {
             return cit.ListarCita(fechaingreso);
         }

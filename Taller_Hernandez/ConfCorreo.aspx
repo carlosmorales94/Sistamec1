@@ -23,7 +23,7 @@
                             <td>
                                 <asp:Label ID="Lbcorreo" runat="server" Text="Correo.........:"></asp:Label></td>
                             <td>
-                                <asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control"  TextMode="Email"></asp:TextBox></td>
+                                <asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox></td>
 
                         </tr>
                         <tr>
@@ -34,6 +34,15 @@
                             <td>
                                 <asp:Button ID="Btnaceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="Btnaceptar_Click" />
 
+                            </td>
+                        </tr>
+
+                        <tr>
+                           <td>
+                                <%--<asp:Label ID="Lbtexto" runat="server" Text="Correo Utilizado:"></asp:Label>--%>
+                            </td>
+                            <td >
+                                      <asp:GridView ID="Gbcorreo" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
                             </td>
                         </tr>
                     </table>

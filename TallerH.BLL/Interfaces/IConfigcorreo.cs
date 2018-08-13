@@ -10,5 +10,7 @@ namespace TallerH.BLL.Interfaces
     public interface IConfigcorreo
     {
         void ActualizarCorreo(Configcorreo Configcorreo);
+        void Actualizar(Configcorreo config);
+        List<Configcorreo> ListarCorreo();
     }
 }

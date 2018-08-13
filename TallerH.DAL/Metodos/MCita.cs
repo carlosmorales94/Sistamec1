@@ -42,7 +42,7 @@ namespace TallerH.DAL.Metodos
                 SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public List<Cita> ListarCita(DateTime fechaingreso)
+        public List<Cita> ListarCita(string fechaingreso)
         {
             return _db.Select<Cita>();
         }
@@ -62,7 +62,7 @@ namespace TallerH.DAL.Metodos
             return _db.Select<Cita>();
         }
 
-        public Cita BuscarCita(DateTime fechaingreso)
+        public Cita BuscarCita(string fechaingreso)
         {
             return _db.Select<Cita>(x => x.FechaIngreso == fechaingreso).FirstOrDefault();
         }
@@ -125,10 +125,10 @@ namespace TallerH.DAL.Metodos
                             Cedula = Convert.ToInt32(dataReader["Cedula"].ToString()),
                             Marca = dataReader["Marca"].ToString(),
                             ProVeh = dataReader["ProVeh"].ToString(),
-                            FechaIngreso = Convert.ToDateTime(dataReader["FechaIngreso"].ToString()),
+                            FechaIngreso = dataReader["FechaIngreso"].ToString(),
                             Placa = dataReader["iLicencia"].ToString(),
                             Estilo = dataReader["Estilo"].ToString(),
-                            Ano = Convert.ToDateTime(dataReader["Ano"].ToString()),
+                          //  Ano = dataReader["Ano"].ToString(),
                             Nota = dataReader["Nota"].ToString(),
                             Bin = Convert.ToInt32(dataReader["Bin"].ToString()),
                             KM = Convert.ToInt32(dataReader["KM"].ToString()),

@@ -69,14 +69,14 @@ namespace Taller_Hernandez
                     {
                         MailMessage mail = new MailMessage();
                         SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
-                        mail.From = new MailAddress("carlosms_94@hotmail.es");
+                        mail.From = new MailAddress("correo");
                         mail.Subject = obj_correo.Asunto;
                         mail.Body = obj_correo.Cuerpo;
                         mail.To.Add(new MailAddress(item));
                         SmtpServer.Port = 25;
                         using (SmtpServer)
                         {
-                            SmtpServer.Credentials = new System.Net.NetworkCredential("carlosms_94@hotmail.es", "Morales20.");
+                            SmtpServer.Credentials = new System.Net.NetworkCredential("corre", "pass");
                             SmtpServer.EnableSsl = true;
                             SmtpServer.Send(mail);
                         }

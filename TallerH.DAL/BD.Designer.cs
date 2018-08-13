@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TallerH.DAL {
+namespace TallerH.DATA {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,7 +26,7 @@ namespace TallerH.DAL {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-JNT2CUC4;Initial Catalog=TallerHernandez;Integrated Security=T" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP\\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=T" +
             "rue")]
         public string conexion {
             get {
