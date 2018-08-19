@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="CambioContrasena.aspx" />
     <Content Include="Citas.aspx" />
+    <Content Include="ConfFactura.aspx" />
     <Content Include="ConfCita.aspx" />
     <Content Include="ConfCorreo.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -169,7 +170,6 @@
     <Content Include="Style\Css2.css" />
     <Content Include="Task.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Vistallegado.aspx" />
     <Content Include="Vista.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -201,6 +201,12 @@
     </Compile>
     <Compile Include="Citas.aspx.designer.cs">
       <DependentUpon>Citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfFactura.aspx.cs">
+      <DependentUpon>ConfFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfFactura.aspx.designer.cs">
+      <DependentUpon>ConfFactura.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConfCita.aspx.cs">
       <DependentUpon>ConfCita.aspx</DependentUpon>
@@ -325,13 +331,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistallegado.aspx.cs">
-      <DependentUpon>Vistallegado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistallegado.aspx.designer.cs">
-      <DependentUpon>Vistallegado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vista.aspx.cs">
       <DependentUpon>Vista.aspx</DependentUpon>
