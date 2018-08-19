@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IAno.cs" />
-    <Compile Include="Interfaces\IAuto.cs" />
     <Compile Include="Interfaces\ICita.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
     <Compile Include="Interfaces\IConfigcorreo.cs" />
@@ -55,7 +54,6 @@
     <Compile Include="Interfaces\ITareas.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Metodos\MAno.cs" />
-    <Compile Include="Metodos\MAuto.cs" />
     <Compile Include="Metodos\MCita.cs" />
     <Compile Include="Metodos\MCliente.cs" />
     <Compile Include="Metodos\MConfigcorreo.cs" />

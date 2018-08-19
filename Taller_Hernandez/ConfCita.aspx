@@ -52,8 +52,6 @@
                     <asp:GridView ID="Ggvmarca" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
                 </div>
             </td>
-
-
             <td>
                 <div class="container">
                     <div id="V2" style="margin-top: 10px;" class="mainbox">
@@ -93,9 +91,6 @@
                     <asp:GridView ID="Gbvano" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
                 </div>
             </td>
-
-
-
             <td>
                 <div class="container">
                     <div id="V3" style="margin-top: 10px;" class="mainbox">

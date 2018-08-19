@@ -10,7 +10,7 @@
 namespace Taller_Hernandez {
     
     
-    public partial class Vista {
+    public partial class Vistallegado {
         
         /// <summary>
         /// mensaje control.
@@ -47,32 +47,5 @@ namespace Taller_Hernandez {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl textoMensajeError;
-        
-        /// <summary>
-        /// Ggvcitas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Ggvcitas;
-        
-        /// <summary>
-        /// Drpplaca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Drpplaca;
-        
-        /// <summary>
-        /// Btnllegado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btnllegado;
     }
 }

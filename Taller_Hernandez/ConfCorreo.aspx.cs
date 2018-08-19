@@ -47,6 +47,7 @@ namespace Taller_Hernandez
                 GetValues();
                 procesar.Actualizar(config);
                 Txtcontra.Text = "";
+                TxtCorreo .Text = "";
             }
             catch (Exception ee)
             {
@@ -60,13 +61,6 @@ namespace Taller_Hernandez
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@Correo", SqlDbType.Char).Value = TxtCorreo.Text;
             da.SelectCommand.Parameters.Add("@Pass", SqlDbType.Char).Value = Txtcontra.Text;
-
-        }
-
-        private void limpiar()
-        {
-            Txtcontra.Text = "";
-            TxtCorreo.Text = "";
         }
 
         private void MostarMensaje(string texto)

@@ -14,6 +14,7 @@ namespace Taller_Hernandez
     {
         public string Vcorreo;
         public string Vpass;
+        public string Vpass1;
         public SqlConnection cn = new SqlConnection(@"Data Source=HP\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,23 +32,10 @@ namespace Taller_Hernandez
             SqlDataReader drp = cm.ExecuteReader();
             while (drp.Read() == true)
             {
-                var Vpass1 = drp[0].ToString();
-               // Vpass = UI.Encriptacion.Decriptar(Vpass1);
+               Vpass1 =  drp[0].ToString ();
+               Vpass = UI.Encriptacion.Decriptar(Vpass1);
             }
             cn.Close();
-
-            //SqlCommand Vcorreo = new SqlCommand("Select Correo from Configcorreo;", cn);
-            //SqlCommand Vpass = new SqlCommand("Select Pass from Configcorreo;", cn);
-
-            //MostarMensajeError(Vcorreo);
-            //cn.Open();
-            //SqlDataReader da = ca.ExecuteReader();
-            //while (da.Read() == true)
-            //{
-            //    Vcorreo = ;
-            //    Vpass =;
-            //}
-            //cn.Close();
         }
         private void MostarMensajeError(string texto)
         {

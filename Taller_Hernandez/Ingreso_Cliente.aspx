@@ -17,12 +17,12 @@
                 <div class="panel-heading">
                     <div class="panel-title">Datos del Cliente</div>
                 </div>
-                <div style="padding-top: 30px" class="panel-body">
+                <div style="padding-top: 30px" >
                     <%--  <table class="form-horizontal">--%>
                     <table cellspacing="3" cellpadding="2">
                         <tr>
-                            <td><asp:Label ID="LbBuscar" runat="server" Text="Buscar por Cedula: "></asp:Label></td>
-                            <td><asp:TextBox ID="TxtBuscarCedula" runat="server" CssClass="form-control"></asp:TextBox></td>
+                            <td><asp:Label ID="LbBuscar" runat="server" Text="Buscar:"></asp:Label></td>
+                            <td><asp:TextBox ID="TxtBuscarCedula" runat="server" MaxLength="9" CssClass="form-control"></asp:TextBox></td>
                             <td><asp:Button ID="BtnBuscarAuto" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="BtnBuscarCliente_Click" /></td>
                             <td><asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" OnClick="BtnEliminar_Click" /></td>
                             </tr>

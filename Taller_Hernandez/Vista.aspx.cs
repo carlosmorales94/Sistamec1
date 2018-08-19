@@ -15,42 +15,37 @@ namespace Taller_Hernandez
 
     public partial class Vista : System.Web.UI.Page
     {
+        private string vfec = DateTime.Now.ToShortDateString(); 
+        private string vfecha1;                                                  
+        private string vfecha;
+
         public SqlConnection cn = new SqlConnection(@"Data Source=HP\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=True");
         ICita cit = new MCita();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //SqlCommand cm = new SqlCommand("Select FechaIngreso from Cita;", cn);
-            //cn.Open();
-            //SqlDataReader dr = cm.ExecuteReader();
-            //while(dr.Read() == true)
-            //{
-            //    Drpfecha.Items.Add(dr[0].ToString());
-            //}
-            //cn.Close();
+            vfecha1 =vfec.Substring(6,4)+vfec.Substring(2,4)+ vfec.Substring(0,2);
+            vfecha = vfecha1.Replace('/', '-');
 
-            SqlDataAdapter da = new SqlDataAdapter("Mostrar", cn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@FechaIngreso", SqlDbType.NVarChar).Value = "2018-08-12"; // DateTime.Now.ToShortDateString();
-            DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //this.Ggvcitas.DataSource = dt;
-
-            Ggvcitas.DataSource = dt;
-            Ggvcitas.DataBind();
+            SqlCommand ca = new SqlCommand
+            ("Select Cedula, Marca, ProVeh, FechaIngreso, Placa, Estilo, Ano, Nota, Bin, Km, RevisionIntervalos, MantenimientoPrevio,DanosVehiculo, Estado from Cita where Estado='Pendiente' and FechaIngreso='"+vfecha+"';", cn);
+            cn.Open();
+            SqlDataReader da = ca.ExecuteReader();
+            while (da.Read() == true)
+            {
+                Ggvcitas.DataSource = da;
+                Ggvcitas.DataBind();
+            }
             cn.Close();
-
-            //List<Cita> listaCita = cit.ListarCita();
-            //List<Cita> listaCitaDatos = cit.ListarCitaDatos();
-            //var lista = listaCitaDatos.Select(x => new { x.FechaIngreso });
-            //var vplaca = listaCitaDatos.Select(x => new { x.Placa });
-            //var vista = listaCita.Select(x => new { x.Estado, x.Cedula, x.FechaIngreso, x.KM, x.Marca, x.Placa }).ToList();
-            //Ggvcitas.DataSource = vista;
-            //Ggvcitas.DataBind();
-            //Drpfecha.DataSource = lista;
-            //Drpfecha.DataBind();
-            //Drpplaca.DataSource = vplaca;
-            //Drpplaca.DataBind();
+            //carga boton llegado
+            SqlCommand ce = new SqlCommand("Select Placa from Cita where Estado='Pendiente' and FechaIngreso='" + vfecha + "';", cn);
+            cn.Open();
+            SqlDataReader de = ce.ExecuteReader();
+            while (de.Read() == true)
+            {
+                Drpplaca .Items.Add(de[0].ToString());
+            }
+            cn.Close();
         }
         private void MostarMensaje(string texto)
         {
@@ -68,42 +63,9 @@ namespace Taller_Hernandez
             textoMensaje.InnerHtml = string.Empty;
         }
 
-        protected void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            /* try
-             {
-
-                 var vista = cit.BuscarCita(Clcita.SelectedDate); /*cli.BuscarCliente(Convert.ToInt32(TxtBuscarCedula.Text));
-                 if (Clcita.SelectedDate != null)
-                 {
-                     Ggvcitas.DataSource = vista;
-                     Ggvcitas.DataBind();
-                 }
-                 else
-                 {
-                     MostarMensajeError("El Cliente no existe");
-                 }
-             }
-             catch (Exception)
-             {
-                 MostarMensajeError("Ocurrio un error");
-             }*/
-
-            SqlDataAdapter da = new SqlDataAdapter("Mostrar", cn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@FechaIngreso", SqlDbType.NVarChar).Value = Drpfecha.Text.ToString();           
-            DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //this.Ggvcitas.DataSource = dt;
-
-            Ggvcitas.DataSource = dt;
-            Ggvcitas.DataBind();
-
-            //cn.Close();
-        }
         protected void Btnllegado_Click(object sender, EventArgs e)
         {
-           // Actualizar();
+            // Actualizar();
         }
 
         protected void Clcita_SelectionChanged(object sender, EventArgs e)
@@ -115,21 +77,6 @@ namespace Taller_Hernandez
         {
 
         }
-        //private void Actualizar()
-        //{
-        //    try
-        //    {
-        //        Cliente cliente = new Cliente
-        //        {
-        //            Cedula = "Llegado"
-        //        };
-        //        cli.ActualizarCliente(cliente);
-        //        MostarMensaje("Auto ingreso con exito");
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MostarMensajeError("No se actualiza estado de la cita");
-        //    }
-        //}
+
     }
 }
