@@ -15,7 +15,6 @@ namespace Taller_Hernandez
     {
         IDescProducto ds = new MDescProducto();
         ICliente cli = new MCliente();
-        IAuto aut = new MAuto();
         protected void Page_Load(object sender, EventArgs e)
         {           
                         
@@ -38,33 +37,33 @@ namespace Taller_Hernandez
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var descProducto= ds.BuscarDescProducto(txtBuscarPlaca.Text);
-                var auto = aut.BuscarAuto(txtBuscarPlaca.Text);
+            //try
+            //{
+               // var descProducto= ds.BuscarDescProducto(txtBuscarPlaca.Text);
+                //var auto = aut.BuscarAuto(txtBuscarPlaca.Text);
                // var cliente = cli.BuscarCliente(txtBuscarPlaca.Text);
-                if (auto != null)
-                {
+             //   if (auto != null)
+             //   {
                   //  LbRCorreo.Text = cliente.Correo;
                   //  LbRMovil.Text = cliente.Movil.ToString(); 
-                    LbRMarca.Text = auto.Marca;
-                    LbRPlaca.Text = auto.Placa;
+                 //   LbRMarca.Text = auto.Marca;
+                 //   LbRPlaca.Text = auto.Placa;
                  //   TxtNombreCliente.Text = cliente.NombreCliente;
-                    LbRKm.Text = auto.KM.ToString();
+                 //   LbRKm.Text = auto.KM.ToString();
                   //  LbRCedula.Text = cliente.Cedula.ToString();
-                    TextBox3.Text = descProducto.Cantidad.ToString();
-                    TextBox2.Text = descProducto.Descripcion ;
-                    TextBox1.Text = descProducto.Precio.ToString();            
-                  }
-                else
-                {
-                    MostarMensajeError("El auto no existe");
-                }
-            }
-            catch (Exception)
-            {
-                MostarMensajeError("Ocurrio un error");
-            }
+              //      TextBox3.Text = descProducto.Cantidad.ToString();
+              //      TextBox2.Text = descProducto.Descripcion ;
+             //       TextBox1.Text = descProducto.Precio.ToString();            
+             //    }
+            //    else
+            //    {
+            //        MostarMensajeError("El auto no existe");
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    MostarMensajeError("Ocurrio un error");
+            //}
         }
         protected void BtnSuma_Click(object sender, EventArgs e)
         {            
@@ -155,7 +154,7 @@ namespace Taller_Hernandez
             }
             try
             {
-                aut.EliminarAuto(txtBuscarPlaca.Text);
+                //aut.EliminarAuto(txtBuscarPlaca.Text);
             }
             catch (Exception)
             {

@@ -67,7 +67,7 @@ namespace Taller_Hernandez
             //DrpMarca.DataBind();
 
             //  if (Request.Params["ced"] != null | Request.Params["correo"] != null)
-            if (Request.Params["parametro"] != null)
+            if (Request.Params["parametro"] != null )
             {
                 contpar = Request.Params["parametro"].PadRight(100,' ');
                 cedic = contpar.Substring(0,9);
@@ -88,9 +88,9 @@ namespace Taller_Hernandez
                     FechaIngreso = Calendar1.SelectedDate.ToString(),
                     Cedula = Convert.ToInt32(cedic),
                     Estado = "Pendiente",
-                    Marca = DrpMarca.Text,
-                    Estilo = DrpEstilo.Text,
-                    Ano = Convert.ToInt32(Drpano.Text),
+                    Descripmarca = DrpMarca.Text,
+                    Descripestilo = DrpEstilo.Text,
+                    Descripano = Convert.ToInt32(Drpano.Text),
                     Nota = "Nada",
                     Bin = Convert.ToInt32(TxtBin.Text),
                     KM = Convert.ToInt32(TxtKM.Text),

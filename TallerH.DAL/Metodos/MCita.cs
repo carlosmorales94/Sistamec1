@@ -123,11 +123,11 @@ namespace TallerH.DAL.Metodos
                         cp = new DATA.Cita
                         {
                             Cedula = Convert.ToInt32(dataReader["Cedula"].ToString()),
-                            Marca = dataReader["Marca"].ToString(),
+                            Descripmarca = dataReader["Marca"].ToString(),
                             ProVeh = dataReader["ProVeh"].ToString(),
                             FechaIngreso = dataReader["FechaIngreso"].ToString(),
                             Placa = dataReader["iLicencia"].ToString(),
-                            Estilo = dataReader["Estilo"].ToString(),
+                            Descripestilo = dataReader["Estilo"].ToString(),
                           //  Ano = dataReader["Ano"].ToString(),
                             Nota = dataReader["Nota"].ToString(),
                             Bin = Convert.ToInt32(dataReader["Bin"].ToString()),

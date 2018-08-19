@@ -12,7 +12,7 @@
     </div>
     <br />
     <div class="container">
-        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div id="loginbox" style="margin-top: 50px; top: 0px; left: 0px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="panel-title">Configuración envio de correo</div>
@@ -22,7 +22,7 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Lbcorreo" runat="server" Text="Correo.........:"></asp:Label></td>
-                            <td>
+                            <td style="width: 174px">
                                 <asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox></td>
 
                         </tr>
@@ -41,7 +41,7 @@
                            <td>
                                 <%--<asp:Label ID="Lbtexto" runat="server" Text="Correo Utilizado:"></asp:Label>--%>
                             </td>
-                            <td >
+                            <td  >
                                       <asp:GridView ID="Gbcorreo" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
                             </td>
                         </tr>

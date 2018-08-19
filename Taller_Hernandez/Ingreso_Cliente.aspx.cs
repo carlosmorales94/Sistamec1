@@ -13,6 +13,7 @@ namespace Taller_Hernandez
 {
     public partial class Ingreso_Cliente : System.Web.UI.Page
     {
+        public string para;
         ICliente cli = new MCliente();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -102,13 +103,31 @@ namespace Taller_Hernandez
         protected void BtnAct_Click(object sender, EventArgs e)
         {
             Actualizar();
-            Response.Redirect("citas.aspx?parametro=" + Convert.ToInt32(TxtCedula.Text) + TxtCorreo.Text);
+            try
+            {
+                para = TxtCedula.Text + TxtCorreo.Text;
+                Response.Redirect("citas.aspx?parametro=" + para);
+            }
+            catch (Exception)
+            {
+               // para = TxtCedula.Text + TxtCorreo.Text;
+                MostarMensajeError("Favor validar los datos" );
+            }
 
         }
         protected void BtnAgendar_Click(object sender, EventArgs e)
         {
             InsertarCliente();
-            Response.Redirect("citas.aspx?parametro=" + Convert.ToInt32(TxtCedula.Text)+ TxtCorreo.Text );
+            try
+            {
+                para = TxtCedula.Text + TxtCorreo.Text;
+                Response.Redirect("citas.aspx?parametro="+para);
+            }
+            catch (Exception)
+            {
+              //  para = TxtCedula.Text + TxtCorreo.Text;
+                MostarMensajeError("Favor validar los datos");
+            }
         }
 
         private void Actualizar()
