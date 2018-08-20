@@ -59,10 +59,12 @@
     <Compile Include="Interfaces\ICita.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
     <Compile Include="Interfaces\IConfigcorreo.cs" />
+    <Compile Include="Interfaces\IContra.cs" />
     <Compile Include="Interfaces\IDescProducto.cs" />
     <Compile Include="Interfaces\IEstilos.cs" />
     <Compile Include="Interfaces\IFacturass.cs" />
     <Compile Include="Interfaces\IHistorial.cs" />
+    <Compile Include="Interfaces\IServicios.cs" />
     <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\ITareas.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="Metodos\MEstilos.cs" />
     <Compile Include="Metodos\MFacturass.cs" />
     <Compile Include="Metodos\MHistorial.cs" />
+    <Compile Include="Metodos\MContra.cs" />
+    <Compile Include="Metodos\MServicios.cs" />
     <Compile Include="Metodos\MMarca.cs" />
     <Compile Include="Metodos\MProducto.cs" />
     <Compile Include="Metodos\MTareas.cs" />

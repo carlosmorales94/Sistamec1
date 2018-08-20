@@ -208,6 +208,10 @@
     </Compile>
     <Compile Include="ConfFactura.aspx.cs">
       <DependentUpon>ConfFactura.aspx</DependentUpon>
+<<<<<<< HEAD
+=======
+      <SubType>ASPXCodeBehind</SubType>
+>>>>>>> FT-ConfIgfactura
     </Compile>
     <Compile Include="ConfFactura.aspx.designer.cs">
       <DependentUpon>ConfFactura.aspx</DependentUpon>
