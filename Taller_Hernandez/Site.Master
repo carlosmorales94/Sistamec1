@@ -55,7 +55,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" >Home<b class="caret"></b></a>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Home<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Vista.aspx">Vista Pendientes</a></li>
                                 <li><a runat="server" href="~/.aspx">Vista llegados</a></li>
@@ -74,6 +74,7 @@
                                 <li><a runat="server" href="~/CrearUsuario.aspx">Usuarios</a></li>
                                 <li><a runat="server" href="~/ConfCorreo.aspx">Correo</a></li>
                                 <li><a runat="server" href="~/ConfCita.aspx">Citas</a></li>
+                                <li><a runat="server" href="~/ConfFactura.aspx">Factura</a></li>
                                 <li><a runat="server" href="~/Task.aspx">Tareas</a></li>
                             </ul>
                         </li>

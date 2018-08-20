@@ -69,6 +69,8 @@
     <Compile Include="DescProducto.cs" />
     <Compile Include="Estilos.cs" />
     <Compile Include="Facturass.cs" />
+    <Compile Include="Servicios.cs" />
+    <Compile Include="ProdContra.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
