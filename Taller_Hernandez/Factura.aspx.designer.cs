@@ -67,13 +67,13 @@ namespace Taller_Hernandez {
         protected global::System.Web.UI.WebControls.Label LbBPlaca;
         
         /// <summary>
-        /// txtBuscarPlaca control.
+        /// drpBuscarPlaca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscarPlaca;
+        protected global::System.Web.UI.WebControls.DropDownList drpBuscarPlaca;
         
         /// <summary>
         /// BtnBuscar control.
@@ -100,7 +100,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtfec;
+        protected global::System.Web.UI.WebControls.Label Txtfec;
         
         /// <summary>
         /// LbNomClie control.
@@ -245,14 +245,5 @@ namespace Taller_Hernandez {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnTerminar;
-        
-        /// <summary>
-        /// BtnSuma control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSuma;
     }
 }

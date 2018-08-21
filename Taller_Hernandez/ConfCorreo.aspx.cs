@@ -34,7 +34,7 @@ namespace Taller_Hernandez
             config = new TallerH.DATA.Configcorreo
             {
                 Correo = TxtCorreo.Text,
-                Pass = UI.Encriptacion.Encriptar(Txtcontra.Text),
+                Pass = Txtcontra.Text,
               
             };
             }

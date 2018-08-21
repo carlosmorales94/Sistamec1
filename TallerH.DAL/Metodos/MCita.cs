@@ -34,6 +34,54 @@ namespace TallerH.DAL.Metodos
                 }
             }
         }
+        public void Actualizar(Cita cita)
+        {
+            DbProviderFactory factory = DbProviderFactories.GetFactory(BD.Default.proveedor);
+            DbConnection conn = null;
+            DbCommand comm = null;
+
+            try
+            {
+                conn = factory.CreateConnection();
+                conn.ConnectionString = BD.Default.conexion;
+                comm = factory.CreateCommand();
+
+                DbParameter param1 = factory.CreateParameter();
+
+                //Carga de Parametros
+                param1.ParameterName = "@Placa";
+                param1.DbType = System.Data.DbType.String;
+                param1.Value = cita.Placa;
+
+                //Abrir Coneccion 
+                comm.Connection = conn;
+                conn.Open();
+
+                //Ejecutar Store Procedure
+                comm.CommandType = System.Data.CommandType.StoredProcedure;
+                comm.CommandText = "sp_ActualizaEstado";
+                comm.Parameters.Add(param1);
+
+                comm.ExecuteNonQuery();
+            }
+            catch (Exception ee)
+            {
+                throw;
+            }
+            finally
+            {
+                comm.Dispose();
+                conn.Dispose();
+            }
+        }
+
+
+
+
+
+
+
+
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
         public MCita()
