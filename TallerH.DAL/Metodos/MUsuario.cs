@@ -209,8 +209,8 @@ namespace TallerH.DAL.Metodos
 
 
 
-                // DbParameter param1 = factory.CreateParameter();
 
+                DbParameter param1 = factory.CreateParameter();
                 DbParameter param2 = factory.CreateParameter();
 
                 DbParameter param3 = factory.CreateParameter();
@@ -220,6 +220,8 @@ namespace TallerH.DAL.Metodos
                 DbParameter param5 = factory.CreateParameter();
 
                 DbParameter param6 = factory.CreateParameter();
+                DbParameter param7 = factory.CreateParameter();
+                DbParameter param8 = factory.CreateParameter();
 
 
 
@@ -237,33 +239,49 @@ namespace TallerH.DAL.Metodos
 
 
 
-                param2.ParameterName = "@Username";
+                param1.ParameterName = "@Username";
+
+                param1.DbType = System.Data.DbType.String;
+
+                param1.Value = usuario.Username;
+
+
+
+
+
+                param2.ParameterName = "@Password";
 
                 param2.DbType = System.Data.DbType.String;
 
-                param2.Value = usuario.Username;
+                param2.Value = usuario.Password;
 
 
+                param3.ParameterName = "@Ingreso";
+
+                param3.DbType = System.Data.DbType.Int32;
+
+                param3.Value = usuario.Ingreso;
 
 
-
-                param3.ParameterName = "@Password";
-
-                param3.DbType = System.Data.DbType.String;
-
-                param3.Value = usuario.Password;
-
-
-                param4.ParameterName = "@IdPerfil";
-
+                param4.ParameterName = "@Factura";
                 param4.DbType = System.Data.DbType.Int32;
+                param4.Value = usuario.Factura;
 
-                param4.Value = usuario.IdPerfil;
-
-
-                param5.ParameterName = "@Ingreso";
+                param5.ParameterName = "@Inventario";
                 param5.DbType = System.Data.DbType.Int32;
-                param5.Value = usuario.Ingreso;
+                param5.Value = usuario.Inventario;
+
+                param6.ParameterName = "@Citas";
+                param6.DbType = System.Data.DbType.Int32;
+                param6.Value = usuario.Citas;
+
+                param7.ParameterName = "@Configuracion";
+                param7.DbType = System.Data.DbType.Int32;
+                param7.Value = usuario.Configuracion;
+
+                param8.ParameterName = "@Reportes";
+                param8.DbType = System.Data.DbType.Int32;
+                param8.Value = usuario.Reportes;
 
 
 
@@ -291,6 +309,7 @@ namespace TallerH.DAL.Metodos
                 comm.CommandText = "sp_Inserta";
 
                 // comm.Parameters.Add(param1);
+                comm.Parameters.Add(param1);
 
                 comm.Parameters.Add(param2);
 
@@ -298,6 +317,9 @@ namespace TallerH.DAL.Metodos
 
                 comm.Parameters.Add(param4);
                 comm.Parameters.Add(param5);
+                comm.Parameters.Add(param6);
+                comm.Parameters.Add(param7);
+                comm.Parameters.Add(param8);
 
 
                 comm.ExecuteNonQuery();

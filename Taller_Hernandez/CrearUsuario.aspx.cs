@@ -28,13 +28,67 @@ namespace Taller_Hernandez
 
         private void GetValues()
         {
+
+            int facturaValor = 0;
+            int inventarioValor = 0;
+            int citasValor = 0;
+            int configuracionValor = 0;
+            int reportesValor = 0;
+            if (rdfactura.Checked == true)
+            {
+                facturaValor = 1;
+            }
+            else
+            {
+                facturaValor = 0;
+            }
+
+            if (rdinventario.Checked == true)
+            {
+                inventarioValor = 1;
+            }
+            else
+            {
+                inventarioValor = 0;
+            }
+            if (rdcitas.Checked == true)
+            {
+                citasValor = 1;
+            }
+            else
+            {
+                citasValor = 0;
+            }
+            if (rdconfiguracion.Checked == true)
+            {
+                configuracionValor = 1;
+            }
+            else
+            {
+                configuracionValor = 0;
+            }
+            if (rdreportes.Checked == true)
+            {
+                reportesValor = 1;
+            }
+            else
+            {
+                reportesValor = 0;
+            }
             usuario = new TallerH.DATA.Usuario
             {
                 Username = TxtUsuarioIns.Text,
-                Password = TxtcontraseñaIns.Text,
-                IdPerfil = 1,
-                Ingreso=2
-               
+                Password = UI.Encriptacion.Encriptar( TxtcontraseñaIns.Text),
+                
+                Ingreso=2,
+
+                
+                Factura = facturaValor,
+                Inventario = inventarioValor,
+                Citas = citasValor,
+                Configuracion = configuracionValor,
+                Reportes = reportesValor
+
                 /* IRiesgo = cbRiesgo.Text.ToString(),
                  DValor = Convert.ToDouble(txtValor.Text),
                  DPromedio = Convert.ToDouble(txtPromedio.Text),

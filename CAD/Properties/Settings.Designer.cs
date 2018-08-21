@@ -8,16 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TallerH.DAL {
+namespace CAD.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
-    internal sealed partial class BD : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
-        private static BD defaultInstance = ((BD)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new BD())));
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
-        public static BD Default {
+        public static Settings Default {
             get {
                 return defaultInstance;
             }
@@ -28,18 +28,9 @@ namespace TallerH.DAL {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CLVDCOM5\\SQLEXPRESS;Initial Catalog=TallerHernandez;Integrated" +
             " Security=True")]
-        public string conexion {
+        public string TallerHernandezConnectionString {
             get {
-                return ((string)(this["conexion"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("System.Data.SqlClient")]
-        public string proveedor {
-            get {
-                return ((string)(this["proveedor"]));
+                return ((string)(this["TallerHernandezConnectionString"]));
             }
         }
     }

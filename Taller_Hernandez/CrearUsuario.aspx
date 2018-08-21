@@ -23,74 +23,74 @@
                                 <tr>                                    
                                     <td>
                                         <asp:Label ID="lbUser" runat="server" Text="Usuario:"></asp:Label>
-                                    </td>
-                                    <td>
                                     <asp:TextBox ID="TxtUsuarioIns" runat="server" CssClass="form-control"></asp:TextBox>
                                     </td>
+                                    <td>
+                                        &nbsp;</td>
                                     </tr>
                                 <tr>
                                     <td>
                                         <asp:Label ID="lbpass" runat="server" Text=" Contraseña: "></asp:Label>
-                                    </td>
-                                    <td>
                                         <asp:TextBox ID="TxtcontraseñaIns" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
 
                                     </td>
+                                    <td>
+                                        &nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <asp:Label ID="Lbconf" runat="server" Text=" Confirmar Contraseña: "></asp:Label>
-                                    </td>
-                                    <td>
                                         <asp:TextBox ID="Txtconfirmar" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                                     </td>
+                                    <td>
+                                        &nbsp;</td>
                                 </tr>
                             </table>
                             <table>
                                 <tr>
                                     <td>
                                         <asp:Label ID="lblFactura" runat="server" Text="Facturación"></asp:Label>
+                                     <asp:CheckBox ID="rdfactura" runat="server" />
                                     </td>
                                     <td>
-                                     <asp:RadioButton ID="rdfactura" runat="server" />
-                                    </td>
+                                        &nbsp;</td>
                                     </tr>
                                 <tr>
                                     <td>
                                         <asp:Label ID="lblInventario" runat="server" Text="Inventario"></asp:Label>
+                                        <asp:CheckBox ID="rdinventario" runat="server" />
                                     </td>
                                     <td>
-                                        <asp:RadioButton ID="rdinventario" runat="server" />
-                                    </td>
+                                        &nbsp;</td>
                                     </tr>
                                 <tr>
                                     <td>
                                         <asp:Label ID="lblCitas" runat="server" Text="Citas"></asp:Label>
+                                        <asp:CheckBox ID="rdcitas" runat="server" />
                                     </td>
                                     <td>
-                                        <asp:RadioButton ID="rdcitas" runat="server" />
-                                    </td>
+                                        &nbsp;</td>
                                 </tr>
                                                                 <tr>
                                     <td style="height: 26px">
                                         <asp:Label ID="LbConfiguracion" runat="server" Text="Configuración"></asp:Label>
+                                        <asp:CheckBox ID="rdconfiguracion" runat="server" />
                                     </td>
                                     <td style="height: 26px">
-                                        <asp:RadioButton ID="rdconfiguracion" runat="server" />
-                                    </td>
+                                        &nbsp;</td>
                                 </tr>
                                                                 <tr>
                                     <td>
                                         <asp:Label ID="LbReportes" runat="server" Text="Reportes"></asp:Label>
+                                        <asp:CheckBox ID="rdreportes" runat="server" />
                                     </td>
                                     <td>
-                                        <asp:RadioButton ID="rdreportes" runat="server" />
-                                    </td>
+                                        &nbsp;</td>
                                 </tr>
                             </table>
                             <div class="form-horizontal">
                                 <br />
-                                <asp:Button ID="BtnRegistrar" runat="server" Text="Resgistrar" CssClass="btn btn-success" OnClick="BtnRegistrar_Click" />
+                                <asp:Button ID="BtnRegistrar" runat="server" Text="Registrar" CssClass="btn btn-success" OnClick="BtnRegistrar_Click" />
                             </div>
                         </div>
                     </div>
