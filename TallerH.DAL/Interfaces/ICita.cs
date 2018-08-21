@@ -9,6 +9,7 @@ namespace TallerH.DAL.Interfaces
 {
     public interface ICita
     {
+        void Actualizar(Cita cita);
         //List<Cita> ListarCita();
         List<Cita> ListarCita(string fechaingreso);
         List<Cita> ListarCitaDatos();

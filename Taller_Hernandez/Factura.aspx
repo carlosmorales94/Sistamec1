@@ -28,7 +28,8 @@
                         <td>
                             <asp:Label ID="LbBPlaca" runat="server" Text="Placa:"></asp:Label></td>
                         <td>
-                            <asp:TextBox ID="txtBuscarPlaca" runat="server"></asp:TextBox></td>
+                            <asp:DropDownList ID="drpBuscarPlaca" runat="server"></asp:DropDownList>
+                        </td>
                         <td>
                             <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" CssClass="btn btn-secondary" OnClick="BtnBuscar_Click" /></td>
                     </div>
@@ -46,8 +47,8 @@
                     </div>
                     <div class="col-xs-6 text-right">
                         <h3>
-                            <asp:Label ID="LbNumFac" runat="server" Text="Num.Factura"></asp:Label>
-                            <asp:TextBox ID="Txtfec" runat="server"></asp:TextBox></h3>
+                            <asp:Label ID="LbNumFac" runat="server" Text="Factura #:"></asp:Label>
+                            <asp:Label ID="Txtfec" runat="server" Text="0"></asp:Label></h3>
                     </div>
                 </div>
                 <hr>
@@ -156,6 +157,5 @@
 
     <br>
     <asp:Button ID="BtnTerminar" runat="server" CssClass="btn btn-primary" Text="Terminar" OnClick="BtnTerminar_Click" />
-    <asp:Button ID="BtnSuma" runat="server" CssClass="btn btn-primary" Text="Suma" OnClick="BtnSuma_Click" />
     <br>
 </asp:Content>

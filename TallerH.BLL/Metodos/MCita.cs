@@ -10,9 +10,44 @@ using System.Transactions;
 namespace TallerH.BLL.Metodos
 {
     public class MCita : ICita
-
-
     {
+        private static MCita instancia;
+
+        public static MCita Instancia
+        {
+            get
+            {
+                if (instancia == null)
+                {
+                    return new MCita();
+                }
+                return instancia;
+            }
+            set
+            {
+                if (instancia == null)
+                {
+                    instancia = value;
+                }
+            }
+        }
+        public void Actualizar(Cita cita)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+                    DAL.Metodos.MCita.Instancia.Actualizar(cita);
+                    scope.Complete();
+                }
+            }
+            catch (Exception ee)
+            {
+                throw;
+            }
+        }
+
+
         DAL.Interfaces.ICita cit;
         public MCita()
         {

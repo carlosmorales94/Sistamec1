@@ -4,21 +4,43 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TallerH.DATA;
 using TallerH.BLL.Interfaces;
 using TallerH.BLL.Metodos;
+using TallerH.DATA;
 using System.IO;
-using System.Web.UI.HtmlControls;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Taller_Hernandez
 {
     public partial class Factura : System.Web.UI.Page
     {
+        public string vnunf;
+        public SqlConnection cn = new SqlConnection(@"Data Source=HP\SQLEXPRESS23;Initial Catalog=TallerHernandez;Integrated Security=True");
         //IDescProducto ds = new MDescProducto();
         //ICliente cli = new MCliente();
         protected void Page_Load(object sender, EventArgs e)
-        {           
-                        
+        {
+            SqlCommand cop = new SqlCommand("Select Placa from cita where Estado='Llegado';", cn);
+            cn.Open();
+            SqlDataReader drp = cop.ExecuteReader();
+            while (drp.Read() == true)
+            {
+                 drpBuscarPlaca.Items.Add(drp[0].ToString());
+            }
+            cn.Close();
+
+
+
+            SqlCommand con = new SqlCommand(" SELECT MAX(NumFac) FROM Factura;", cn);
+            cn.Open();
+            SqlDataReader drn = con.ExecuteReader();
+            while (drn.Read() == true)
+            {
+                vnunf = drn[0].ToString();
+                Txtfec.Text = vnunf + 1;
+            }
+            cn.Close();
         }
         //private void MostarMensaje(string texto)
         //{
@@ -82,28 +104,18 @@ namespace Taller_Hernandez
             //}
 
         }
-        protected void BtnSuma_Click(object sender, EventArgs e)
-        {            
-           // suma();
+
+
+
+        protected void Btn_facelec_Click(object sender, EventArgs e)
+        {
+    System.Diagnostics.Process.Start(@"C:\Users\USUARIO\Documents\Releases\FacturaElectronicaCR-master\FacturaElectronicaCR_VB\bin\Debug\FacturaElectronicaCR_VB.exe");
         }
 
+        protected void BtnTerminar_Click(object sender, EventArgs e)
+        {
 
-        //protected void Btn_facelec_Click(object sender, EventArgs e)
-        //{
-        //    System.Diagnostics.Process.Start(@"C:\Users\USUARIO\Documents\Releases\FacturaElectronicaCR-master\FacturaElectronicaCR_VB\bin\Debug\FacturaElectronicaCR_VB.exe");
-
-        //}
-      //  public void suma()
-        //    {
-            //    int v1 = Convert.ToInt32(TextBox1.Text);
-             //   int v2 = Convert.ToInt32(TextBox6.Text);
-              //  int v3 = Convert.ToInt32(TextBox9.Text);
-             //   int tv = v1 + v2 + v3 ;
-             //   TextBox33.Text = tv.ToString();          
-         //   }
-
-
-       // protected void BtnTerminar_Click(object sender, EventArgs e)
+        }
         //{
         //    try
         //    {

@@ -13,7 +13,7 @@ using TallerH.DATA;
 namespace Taller_Hernandez
 {
 
-    public partial class Vista : System.Web.UI.Page
+    public partial class Vistallegados : System.Web.UI.Page
     {
         TallerH.DATA.Cita cita;
         private string vfec = DateTime.Now.ToShortDateString(); 
@@ -30,7 +30,7 @@ namespace Taller_Hernandez
             vfecha = vfecha1.Replace('/', '-');
 
             SqlCommand ca = new SqlCommand
-            ("Select Cedula, Descripmarca, ProVeh, FechaIngreso, Placa, Descripestilo, Descripano, Nota, Bin, Km, RevisionIntervalos, MantenimientoPrevio,DanosVehiculo, Estado from Cita where Estado='Pendiente' and FechaIngreso='"+vfecha+"';", cn);
+            ("Select Cedula, Descripmarca, ProVeh, FechaIngreso, Placa, Descripestilo, Descripano, Nota, Bin, Km, RevisionIntervalos, MantenimientoPrevio,DanosVehiculo, Estado from Cita where Estado='Llegado' and FechaIngreso='"+vfecha+"';", cn);
             cn.Open();
             SqlDataReader da = ca.ExecuteReader();
             while (da.Read() == true)
@@ -40,7 +40,7 @@ namespace Taller_Hernandez
             }
             cn.Close();
             //carga boton llegado
-            SqlCommand ce = new SqlCommand("Select Placa from Cita where Estado='Pendiente' and FechaIngreso='" + vfecha + "';", cn);
+            SqlCommand ce = new SqlCommand("Select Placa from Cita where Estado='Llegado' and FechaIngreso='" + vfecha + "';", cn);
             cn.Open();
             SqlDataReader de = ce.ExecuteReader();
             while (de.Read() == true)
