@@ -11,6 +11,5 @@ namespace TallerH.BLL.Interfaces
     {
         DescProducto BuscarDescProducto(string placa);
         void InsertarDescProducto(DescProducto descProducto);
-
     }
 }

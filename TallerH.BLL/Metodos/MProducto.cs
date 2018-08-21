@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TallerH.DATA;
 using TallerH.BLL.Interfaces;
+using System.Transactions;
 
 namespace TallerH.BLL.Metodos
 {
@@ -15,7 +16,22 @@ namespace TallerH.BLL.Metodos
         {
             prod = new DAL.Metodos.MProducto();
         }
-      
+
+        public void Actualizar(Producto producto)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+                    DAL.Metodos.MProducto.Instancia.Actualizar(producto);
+                    scope.Complete();
+                }
+            }
+            catch (Exception ee)
+            {
+                throw;
+            }
+        }
 
         public void InsertarProducto(Producto producto)
         {

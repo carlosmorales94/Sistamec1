@@ -7,12 +7,14 @@ using ServiceStack.OrmLite;
 using System.Data;
 using TallerH.DATA;
 using TallerH.DAL.Interfaces;
+using System.Data.Common;
 
 namespace TallerH.DAL.Metodos
 {
     public class MDescProducto : IDescProducto
         {
-            private OrmLiteConnectionFactory _conexion;
+
+        private OrmLiteConnectionFactory _conexion;
             private IDbConnection _db;
             public MDescProducto()
             {
