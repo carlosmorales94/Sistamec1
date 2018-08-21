@@ -11,13 +11,9 @@
         <strong id="textoMensajeError" runat="server"></strong>
     </div>
     <br />
-
-
     <table>
         <tr>
             <td>
-
-
                 <div class="container">
                     <div id="loginbox" style="margin-top: 50px;" class="mainbox">
                         <div class="panel panel-info">
@@ -87,8 +83,6 @@
                     <asp:GridView ID="Ggvpro" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
                 </div>
 
-
-
             </td>
             <td>
 
@@ -101,6 +95,14 @@
                             <div style="padding-top: 30px" class="panel-body">
                                 <div class="form-horizontal">
                                     <table cellspacing="3" cellpadding="2">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Lbid" runat="server" Text="Id Prod:"></asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:DropDownList ID="Drpidprod" runat="server"></asp:DropDownList>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <asp:Label ID="Lbcant" runat="server" Text="Cantidad:"></asp:Label>
@@ -117,11 +119,11 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                        <%--    <td>
                                                 <asp:Button ID="BtnSacar" runat="server" Text="Sacar de Stock" CssClass="btn btn-danger" />
-                                            </td>
+                                            </td>--%>
                                             <td>
-                                                <asp:Button ID="BtnFactura" runat="server" Text="Facturar" CssClass="btn btn-danger" />
+                                                <asp:Button ID="BtnFactura" runat="server" Text="Facturar" CssClass="btn btn-danger" OnClick="BtnFactura_Click"/>
                                             </td>
                                         </tr>
                                     </table>
@@ -130,14 +132,10 @@
                         </div>
                     </div>
                 </div>
-                <div align="center">
+       <%--         <div align="center">
                     <asp:GridView ID="GridView1" runat="server" BackColor="Silver" CellPadding="5" CellSpacing="5"></asp:GridView>
-                </div>
-
-
-
+                </div>--%>
             </td>
         </tr>
     </table>
-
 </asp:Content>

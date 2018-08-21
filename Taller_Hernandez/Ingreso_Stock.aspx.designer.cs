@@ -184,6 +184,24 @@ namespace Taller_Hernandez.UI {
         protected global::System.Web.UI.WebControls.GridView Ggvpro;
         
         /// <summary>
+        /// Lbid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbid;
+        
+        /// <summary>
+        /// Drpidprod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Drpidprod;
+        
+        /// <summary>
         /// Lbcant control.
         /// </summary>
         /// <remarks>
@@ -220,15 +238,6 @@ namespace Taller_Hernandez.UI {
         protected global::System.Web.UI.WebControls.DropDownList Drpplaca;
         
         /// <summary>
-        /// BtnSacar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSacar;
-        
-        /// <summary>
         /// BtnFactura control.
         /// </summary>
         /// <remarks>
@@ -236,14 +245,5 @@ namespace Taller_Hernandez.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnFactura;
-        
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

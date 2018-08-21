@@ -14,5 +14,6 @@ namespace TallerH.BLL.Interfaces
         void InsertarProducto(Producto producto);
         void ActualizarProducto(Producto producto);
         void EliminarProducto(int IdProducto );
+        void Actualizar(Producto producto);
     }
 }
