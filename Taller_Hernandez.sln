@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerH.BLL", "TallerH.BLL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerH.DAL", "TallerH.DAL\TallerH.DAL.csproj", "{87829AB2-B072-4BC1-AC2A-FF971A70FA94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAD", "CAD\CAD.csproj", "{5947D6EA-032D-42DE-BCE3-8E387750FF93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{87829AB2-B072-4BC1-AC2A-FF971A70FA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87829AB2-B072-4BC1-AC2A-FF971A70FA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87829AB2-B072-4BC1-AC2A-FF971A70FA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5947D6EA-032D-42DE-BCE3-8E387750FF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5947D6EA-032D-42DE-BCE3-8E387750FF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5947D6EA-032D-42DE-BCE3-8E387750FF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5947D6EA-032D-42DE-BCE3-8E387750FF93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

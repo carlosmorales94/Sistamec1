@@ -72,6 +72,21 @@ namespace Taller_Hernandez
              {
 
              }*/
+
+              if(!CAD.CapaLogin.ExisteUsuario(txtUsuario.Text, txtContra.Text))
+            {
+                mensajeError.Visible = true;
+                textoMensajeError.InnerHtml = "Usuario y Contraseña incorrectos";
+                txtUsuario.Text = "";
+                txtContra.Text = "";
+                txtUsuario.Focus();
+                return;
+            }
+            else
+            {
+                Citas citas = new Citas();
+                Response.Redirect("Citas.aspx", false);
+            }
              }
         }
 }

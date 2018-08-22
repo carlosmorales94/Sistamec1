@@ -118,7 +118,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdfactura;
+        protected global::System.Web.UI.WebControls.CheckBox rdfactura;
         
         /// <summary>
         /// lblInventario control.
@@ -136,7 +136,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdinventario;
+        protected global::System.Web.UI.WebControls.CheckBox rdinventario;
         
         /// <summary>
         /// lblCitas control.
@@ -154,7 +154,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdcitas;
+        protected global::System.Web.UI.WebControls.CheckBox rdcitas;
         
         /// <summary>
         /// LbConfiguracion control.
@@ -172,7 +172,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdconfiguracion;
+        protected global::System.Web.UI.WebControls.CheckBox rdconfiguracion;
         
         /// <summary>
         /// LbReportes control.
@@ -190,7 +190,7 @@ namespace Taller_Hernandez {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdreportes;
+        protected global::System.Web.UI.WebControls.CheckBox rdreportes;
         
         /// <summary>
         /// BtnRegistrar control.

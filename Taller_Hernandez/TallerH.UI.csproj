@@ -354,6 +354,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CAD\CAD.csproj">
+      <Project>{5947d6ea-032d-42de-bce3-8e387750ff93}</Project>
+      <Name>CAD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TallerH.BLL\TallerH.BLL.csproj">
       <Project>{df875776-23b7-4cbb-935b-a480e34c8502}</Project>
       <Name>TallerH.BLL</Name>
